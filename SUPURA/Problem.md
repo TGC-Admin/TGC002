@@ -30,7 +30,7 @@ $\mathrm{query}_2$
 \vdots
 $\mathrm{query}_Q$
 ```
-$1 \leq i \leq Q$ なる整数 $i$ について $\mathrm{query}_i$ は $i$ 番目のクエリを表します．  
+$1 \leq i \leq Q$ なる整数 $i$ について $\mathrm{query}_i$ は $i$ 番目のクエリを表す．  
 
 出力
 -----
