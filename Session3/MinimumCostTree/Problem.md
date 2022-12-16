@@ -29,10 +29,6 @@ $i$ 番目の辺は $2$ 頂点 $u_i, v_i$ を結んでおり，はじめ，重�
 入力は以下の形式で標準入力から与えられる．
 ```md
 $N$  
-$u_1 \enspace v_1 \enspace w_1$
-```
-
-$N$  
 $u_1 \enspace v_1 \enspace w_1$  
 $u_2 \enspace v_2 \enspace w_2$  
 $\vdots$  
@@ -42,7 +38,7 @@ $a_1 \enspace b_1$
 $a_2 \enspace b_2$  
 $\vdots$  
 $a_Q \enspace b_Q$  
-
+```
 
 出力
 -----
