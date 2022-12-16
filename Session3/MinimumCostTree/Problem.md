@@ -20,8 +20,9 @@ $i$ 番目の辺は $2$ 頂点 $u_i, v_i$ を結んでおり，はじめ，重�
 制約
 -----
 - $1 \leq N, Q \leq 2 \times 10^5$
-- $1 \leq u_i, v_i \leq N \; \scriptsize (1 \leq i < N)$ 
-- $1 \leq a_i, b_i \leq N \; \scriptsize (1 \leq i \leq Q)$ 
+- $1 \leq u_i < v_i \leq N \; \scriptsize (1 \leq i < N)$ 
+- $1 \leq a_i < b_i \leq N \; \scriptsize (1 \leq i \leq Q)$ 
+- 与えられるグラフは連結である
 - 入力はすべて整数である
 
 入力
