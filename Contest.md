@@ -1,43 +1,24 @@
-# TGC002
-${\textnormal{The Gray  -- Beginner's Algorithmic Competition}} \scriptsize \hspace{0.4em} \mathrm{_{^{Vol.\hspace{0.1em}1}}}$
+**TGC002**
+
+$\large \text{Welcome 2023 \, Special Edition}$  
+$\Large {\textnormal{The Gray  -- Beginner's Algorithmic Competition}} \scriptsize \hspace{0.4em} \mathrm{_{^{Vol.\hspace{0.1em}2}}}$  
+
+$\text{\color{#a935db}{PORTAL}}$
 ===
 
 「初心者による初心者のための」ビギナー向けコンテストです。   
 
+新年を記念して、拡大バージョンでご提供いたします。
+
 どなたでも，ぜひぜひお気軽にご参加ください！！
 
 
-Writer: [$\scriptsize\text\color{#804000}machonium$](https://twitter.com/machoniump), [$\scriptsize\text\color{#00C0C0}tnodino$](https://twitter.com/tnodino), [$\scriptsize\text\color{#008000}achapi$](https://twitter.com/achapi_kyopuro), [$\scriptsize\text\color{#008000}uni\_kakurenbo$](https://twitter.com/KakurenboUni)  
-Tester: [$\scriptsize\text\color{#00C0C0}FplusFplusF$](https://twitter.com/FplusFplusF____), [$\scriptsize\text\color{#008000}achapi$](https://twitter.com/achapi_kyopuro)  
+Writer: [$\scriptsize\text\color{#804000}machonium$](https://twitter.com/machoniump), [$\scriptsize\text\color{#00C0C0}achapi$](https://twitter.com/achapi_kyopuro), [$\scriptsize\text\color{#00C0C0}King314$](https://twitter.com/SyNtAx_error_1), [$\scriptsize\text\color{#00C0C0}tnodino$](https://twitter.com/tnodino), [$\scriptsize\text\color{#008000}uni\_kakurenbo$](https://twitter.com/KakurenboUni)  
+Tester: TODO
 
 主催：[@machoniump](https://twitter.com/machoniump) 
 
----
-First Accepted
----
-A  問題 - magurofly 01:17   
-B  問題 - magurofly 02:37  
-C  問題 - magurofly 03:17   
-D  問題 - sepa38 8:39  
-E1  問題 - first_vil 14:06  
-E2 問題 - first_vil 14:06  
-F   問題 -  first_vil 34:11  
-G   問題 - first_vil 49:59  
-Ex 問題 - ripity 42:13  
-
-**[事後アンケート](https://forms.gle/NWArb6UnrmitmKJYA)へのご協力をお願いいたします。**
-
-[A 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_A.086) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_A.086/editorial)  
-[B 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_B.871) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_B.871/editorial)  
-[C 問題](https://mojacoder.app/users/Machonium/problems/TG-BsAC-001_C.873) - [解説](https://mojacoder.app/users/Machonium/problems/TG-BsAC-001_C.873/editorial)  
-[D 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_D.589) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_D.589/editorial)  
-[E 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_E1.389) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_E1.389/editorial)  
-[F 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_F.295) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_F.295/editorial)  
-[G 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_G.580) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_G.580/editorial)  
-[Ex 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_Ex.124) - [解説](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-001_Ex.124/editorial)  
-
-
-#### ハッシュタグ: [#TGC001](https://twitter.com/hashtag/TGC001?src=hashtag_click)  
+#### ハッシュタグ: [#TGC002](https://twitter.com/hashtag/TGC002?src=hashtag_click), [#TGC002_S1](https://twitter.com/hashtag/TGC002_S1?src=hashtag_click), [#TGC002_S2](https://twitter.com/hashtag/TGC002_S2?src=hashtag_click), [#TGC002_S3](https://twitter.com/hashtag/TGC002_S3?src=hashtag_click)
 アナウンス等は Twitter 上でこのタグを用いて行います。  
 適宜ご確認ください。
 
@@ -45,74 +26,51 @@ Ex 問題 - ripity 42:13
 
 実施要項
 ---
-日時：$\bold{2022{/}10{/}23\>\>13{:}10 - 15{:}40}\>(150$ 分間 $)  $  
-ペナルティ：$5$ 分/個
+$3$ つの部にわたって開催いたします。  
+それぞれが互いに独立したコンテストです。  
 
-リソース制限
----
-実行時間：$2$ 秒  
-メモリ使用量：$1024\,\mathrm{MiB}$
+お好きなもの、ご都合の合うものにのみご参加いただいて結構です。  
 
-競技中の質問
----
-問題文の疑問点等については，Twitter にて [@uni_kakurenbo](https://twitter.com/KakurenboUni) へメンションをお願いします。
+- $\text{Session 1}$：$\bold{2023{/}00{/}00\>\>00{:}00 - 00{:}00}\>(100$ 分間 $)$  
+- $\text{Session 2}$：$\bold{2023{/}00{/}00\>\>00{:}00 - 00{:}00}\>(150$ 分間 $)$  
+- $\text{Session 3}$：$\bold{2023{/}00{/}00\>\>00{:}00 - 00{:}00}\>(180$ 分間 $)$  
 
-問題・配点
+配点・難易度
 ---
-AtCoder 等の他コンテストにおける難易度観との互換性は保証しておりません。  
+各部ごとに $8$ つの問題が出題されます。(合計で $24$ 題です。)  
+
+問題の推定 Difficulty：
+- $\text{Session 1}$：$\color{808080}{100} - \color{008000}{800}$  
+- $\text{Session 2}$：$\color{808080}{200} - \color{00C0C0}{1200}$  
+- $\text{Session 3}$：$\color{804000}{500} - \color{0000FF}{1800}$  
+
+配点については，各部のトップページをご覧ください。  
+AtCoder 等の他コンテストにおける配点-難易度観との互換性は保証しておりません。  
 ご了承ください。
-$$
-\def\arraystretch{1.12}
-	\begin{array}{c|l|c}
-		\mathrm{\#} & \mathrm{Task} & \mathrm{Score} \\ \hline\hline
-		1 & \> \mathrm{A}    & 100 \\ \hline 
-		2 & \> \mathrm{B}    & 200 \\ \hline
-		3 & \> \mathrm{C}    & 300 \\ \hline
-		4 & \> \mathrm{D}  & 400 \\ \hline
-		5 & \> \mathrm{E_1}    & 200 \\ \hline
-		6 & \> \mathrm{E_2}    & 300 \\ \hline
-		7 & \> \mathrm{F}  & 500 \\ \hline
-		8 & \> \mathrm{G}  & 600 \\ \hline
-		9 & \> \mathrm{Ex}  & 600 \\ \hline\hline
-        - & \mathrm{Total}   & 3200 \\
-	\end{array}
-$$
-
-注記
----
-- テストデータ容量等の都合により，**1 ケースに複数のテストデータやクエリが与えられる形式の問題**が多くなっています。
-	- 特に後半の問題に多く，具体的には $\underline \mathrm{E_1, E_2, G, Ex}$ の $4$ 題が該当します。
-- $2$ 問題 $\mathrm {E_1, E_2}$ は互いに**制約のみが異なる同一の問題**です。
-	- $\mathrm E_1$ よりも $\mathrm E_2$ の方がより制約が弱い(難しい)問題です。
-    - いずれも同一のコードにより AC を得ることができます。
-    - $\mathrm E_2$ が解ければ自動的に $\mathrm E_1$ が解けるため，FA の判定において，各ユーザーの $\mathrm E_1$ の正解時刻 を次のように定めます。
-    	- $\min \{$ 初めて $\mathrm E_1$ で AC を得た提出の提出時刻$, $ 初めて $\mathrm E_2$ で AC を得た提出の提出時刻 $\}$
-
-
 
 言語
 ---
-少なくとも C++, Python (PyPy3) の二つの言語で AC 可能なことを確認しています。  
+少なくとも C++, Python (PyPy3) の二つの言語で AC を得られることを確認しています。  
 処理速度はじめ言語及び処理系の特性による差異については十分注意してください。
 
 解説
 ---
-コンテスト終了後にリンクをこのページへ追記いたします。
+コンテスト終了後にリンクを各部のトップページへ追記いたします。
 
 運営より
 ---
-先日開催いたしました TGC000 につきましては，予想を遥かに上回る，数多くの競プロerの皆様にご参加いただきました。  
-本当にありがとうございます。  
+以前開催した TGC000, TGC001 にご参加くださった皆様、お久しぶりです。  
+「今回が初めてだよー」という皆様、はじめまして。  
 
-我々運営といたしましても，勝手が何一つ分からない状態であったために，少なからず至らぬ点があったのだろうと反省しておりました。  
+第 $3$ 回目となる当コンテストを開催することができて、我々運営陣も大変うれしく思います。  
 
-今回の TGC001 は記念すべき最小の正整数回です。  
-前回のコンテスト終了後に参加者の皆様から頂いたアンケートの結果に基づいて，難易度や点数配分などを調整いたしました。  
-Writer 陣も強化し，よりたくさんの「解けた！！」を届けることのできる問題を準備して参りました。  
+新年の到来を記念すべく、かねてより準備を進めて参りました。  
+より沢山の方々に楽しんでもらいたい、という思いのもと、$3$ つの部にわたって開催する運びとなっております。
 
-ぜひ楽しんでいただければ幸いです！  
+少しでも多くの競プロerの皆様に楽しんでいただければ幸いです。
 
-今後とも TGC をよろしくお願いいたします。
+今後とも，TGC をどうぞよろしくお願いいたします。
 
 #### 過去のコンテスト
 - [TGC000](https://mojacoder.app/users/Machonium/contests/TG-BsAC-000) 2022/08/11
+- [TGC001](https://mojacoder.app/users/Machonium/contests/TG-BsAC-001) 2022/10/23
