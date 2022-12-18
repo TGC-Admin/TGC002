@@ -14,11 +14,11 @@ $i \scriptsize \; (1 \leq 1 \leq N)$ 番目の条件 $P_i(x)$ は以下を満た
 制約
 -----
 - $2 \leq N \leq 4 \times 10^5$
-- $|A_i| \leq 10^8 \scriptsize \; (1 \leq i \leq N)$.
-- $A_i$ は整数である
 - $S_i \in \{\,$ `L`$, $ `U` $\,\} \scriptsize \; (1 \leq i \leq N)$
 - $S_1 = $ `L`
 - $S_2 = $ `U`
+- $|A_i| \leq 10^8 \scriptsize \; (1 \leq i \leq N)$.
+- $A_i$ は整数である
 - 答えは $2^{30}$ 未満の非負整数である
 
 入力
@@ -26,8 +26,8 @@ $i \scriptsize \; (1 \leq 1 \leq N)$ 番目の条件 $P_i(x)$ は以下を満た
 入力は以下の形式で標準入力から与えられる．
 ```md
 $N$  
-$A_1 \enspace A_2 \enspace \ldots \enspace A_N$  
 $S_1S_2 \ldots S_N$  
+$A_1 \enspace A_2 \enspace \ldots \enspace A_N$  
 ```
 
 出力
@@ -38,8 +38,8 @@ $S_1S_2 \ldots S_N$
 =====
 ```入力例1
 3
-20 22 12
 LUL
+20 22 12
 ```
 ```出力例1
 3
