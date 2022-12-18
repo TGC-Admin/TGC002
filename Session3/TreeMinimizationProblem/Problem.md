@@ -22,6 +22,7 @@ $i$ 番目の辺は，頂点 $i$ と頂点 $p_i$ とを結んでおり，はじ�
 - $1 \leq N, Q \leq 2 \times 10^5$
 - $i < p_i \leq N \; \scriptsize (1 \leq i < N)$ 
 - $|w_i| \leq 10^6 \; \scriptsize (1 \leq i < N)$
+- $1 \leq a_i < b_i \leq N \; \scriptsize (1 \leq i \leq Q)$
 - 入力はすべて整数である
 
 入力
