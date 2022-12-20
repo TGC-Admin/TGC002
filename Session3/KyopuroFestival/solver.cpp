@@ -46,15 +46,15 @@ template<class Cost = ll> struct Edge {
 
     Edge(const Internal::Size t, const Cost w) : to(t), cost(w) {}
 
-    std::pair<Internal::Size, Cost> _debug() const { return { to, cost }; };
+    pair<Internal::Size, Cost> _debug() const { return { to, cost }; };
 };
 
-template<class E = Edge<ll>> struct Graph : std::vector<std::vector<E>> {
+template<class E = Edge<ll>> struct Graph : vector<vector<E>> {
     using Vertex = Internal::Size;
 
     enum class EdgeType { Undirected, Directed };
 
-    Graph(const Vertex n = 0) : std::vector<std::vector<E>>(n) {}
+    Graph(const Vertex n = 0) : vector<vector<E>>(n) {}
 
     template<const EdgeType EDGE_TYPE = EdgeType::Directed>
     void add_edge(const Vertex u, const Vertex v, const typename E::cost_type w = 0) {

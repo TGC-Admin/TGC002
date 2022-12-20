@@ -30,8 +30,10 @@ $i$ 番目の辺は，頂点 $i$ と頂点 $p_i$ とを結んでおり，はじ�
 入力は以下の形式で標準入力から与えられる．
 ```md
 $N$  
-$p_1 \enspace p_2 \enspace \ldots \enspace p_{N-1}$  
-$w_1 \enspace w_2 \enspace \ldots \enspace w_{N-1}$  
+$p_1 \enspace w_1$  
+$p_2 \enspace w_2$  
+$\vdots$  
+$p_{N-1} \enspace w_{N-1}$  
 $Q$  
 $a_1 \enspace b_1$  
 $a_2 \enspace b_2$  
