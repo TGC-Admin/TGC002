@@ -110,7 +110,7 @@ struct LowestCommonAncestor {
 
 signed main() {
     int n; cin >> n;
-    Lib::Graph<> G(n);
+    Lib::Graph G(n);
 
     REP(i, n-1) {
         int p, w; cin >> p >> w;
@@ -143,7 +143,6 @@ signed main() {
     }
 
     ll sum_cost = 0, max_contrib = INT64_MIN;
-
     REP(v, n) {
         REP(i, G[v].size()) {
             const auto &e = G[v][i];
