@@ -114,12 +114,12 @@ signed main() {
 
     REP(i, n-1) {
         int p, w; cin >> p >> w;
-        G.add_edge(--p, i, w);
+        G.add_edge(--p, i+1, w);
     }
 
     vector<int> diff(n);
     {
-        Lib::LowestCommonAncestor lca(G, n-1);
+        Lib::LowestCommonAncestor lca(G);
 
         int q; cin >> q;
         REP(i, q) {
@@ -131,18 +131,18 @@ signed main() {
 
     vector<int> cnt(n);
     {
-        auto dfs = [&](auto& dfs, int v) -> int {
+        auto accum = [&](auto& accum, int v) -> int {
             int acc = 0;
             REP(i, G[v].size()) {
                 int nv = G[v][i].to;
-                acc += dfs(dfs, nv);
+                acc += accum(accum, nv);
             }
             return cnt[v] = acc + diff[v];
         };
-        dfs(dfs, n-1);
+        accum(accum, 0);
     }
 
-    ll sum_cost = 0, max_cost = INT64_MIN;
+    ll sum_cost = 0, max_contrib = INT64_MIN;
 
     REP(v, n) {
         REP(i, G[v].size()) {
@@ -150,9 +150,9 @@ signed main() {
             const ll contrib = cnt[e.to] * e.cost;
 
             sum_cost += contrib;
-            max_cost = max(max_cost, contrib);
+            max_contrib = max(max_contrib, contrib);
         }
     }
 
-    cout << sum_cost - max_cost << "\n";
+    cout << min(sum_cost, sum_cost - max_contrib) << "\n";
 }
