@@ -9,8 +9,6 @@ using ll = long long;
 
 namespace Lib {
 
-
-
 template<class T> struct Compression : vector<int> {
   protected:
     vector<T> values;
