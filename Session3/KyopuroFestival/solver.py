@@ -1,6 +1,8 @@
+from collections import deque
+from itertools import product
 
 # Dinic's algorithm
-from collections import deque
+# Thanks to: https://tjkendev.github.io/procon-library/python/max_flow/dinic.html
 class Dinic:
     def __init__(self, N):
         self.N = N
@@ -57,3 +59,18 @@ class Dinic:
                 f = self.dfs(s, t, INF)
                 flow += f
         return flow
+
+n = int(input())
+T = [[*map(int, input().split())] for _ in [0] * n]
+
+mf_graph = Dinic(2*n+2)
+
+for i in range(n):
+    mf_graph.add_edge(2*n, i, 1)
+    mf_graph.add_edge(n+i, n*2+1, 1)
+
+for i, j in product(range(n), range(n)):
+    if T[i][0] <= T[j][2] < T[i][1]:
+        mf_graph.add_edge(i, n+j, 1)
+
+print(n - mf_graph.flow(2*n, 2*n+1))
