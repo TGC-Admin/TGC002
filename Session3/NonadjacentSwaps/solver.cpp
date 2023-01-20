@@ -8,7 +8,7 @@ signed main() {
     int n; cin >> n;
     string s, t; cin >> s >> t;
 
-    if(set(s.begin(), s.end()) != set(t.begin(), t.end())) {
+    if(multiset(s.begin(), s.end()) != multiset(t.begin(), t.end())) {
         cout << "No\n";
         return 0;
     }
@@ -19,11 +19,11 @@ signed main() {
     }
 
     queue<string> que;
-    unordered_set<string> seen;;
+    unordered_set<string> seen;
 
     que.push(s), seen.insert(s);
 
-    while(!que.empty()) {
+    while(not que.empty()) {
         auto v = que.front(); que.pop();
         if(v == t) {
             cout << "Yes\n";
@@ -39,4 +39,6 @@ signed main() {
     }
 
     cout << "No\n" << "\n";
+
+    return 0;
 }
