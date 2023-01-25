@@ -7,7 +7,7 @@ $k \; \scriptsize (1 \leq k \leq Q)$ 回目の操作は以下です：
 - $l_k \leq i \leq r_k$ を満たす任意の整数 $i$ について，$A_i$ を $A_i \times x_k$ で置換する．
 
 その後，$1 \leq i \leq N$ を満たす任意の整数 $i$ について，以下のように定められる整数値 $D_i$ を求めてください：
-- $D_i \coloneqq (A_i$ の正の約数の総和$) \bmod 998244353$
+- $D_i \coloneqq (A_i$ の正の約数の個数$) \bmod 998244353$
 
 制約
 -----
