@@ -19,7 +19,7 @@ $i \; \scriptsize (1 \leq i \leq N)$ 回目の破壊のとき，$C_i$ だけコ�
 -----
 - $2 \leq H \leq 500$
 - $2 \leq W \leq 500$
-- $1 \leq N \leq HW - 2$
+- $1 \leq N \leq 10^5$
 - $|C_i| \leq 1,000$
 
 入力
