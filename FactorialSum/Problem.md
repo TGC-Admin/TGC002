@@ -2,7 +2,7 @@
 =====
 
 正の整数 $n$ に対して関数 $f(n)$ を次のように定めます：  
-$\displaystyle f(n) \coloneqq \sum_{1 \leq k \leq n} k \cdot k! + 1$
+$\displaystyle f(n) \coloneqq \sum_{1 \leq k \leq n} (k \cdot k!) + 1$
 
 $f(N)$ が $2^p$ の倍数となる正の整数 $p$ の最大値はいくらでしょうか？  
 求めてください．
