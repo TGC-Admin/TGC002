@@ -3,7 +3,7 @@
 非負の整数 $K$ および $N$ 個の整数 $A_1, A_2, \ldots, A_N$ があります．  
 
 実数 $x$ 対して，$f(x)$ を以下のように定めます：
-- $f(x) = (\,|A_i - x| \leq K$ を満たす $i \; \scriptsize  (1 \leq i \leq N)$ の個数$)$
+- $f(x) \coloneqq (\,|A_i - x| \leq K$ を満たす $i \; \scriptsize  (1 \leq i \leq N)$ の個数$)$
 
 実数 $x$ の値を自由に変化させられるとき，$f(x)$ の最大値を求めてください．  
 
