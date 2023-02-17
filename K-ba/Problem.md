@@ -45,7 +45,7 @@ $v_1 \enspace v_2 \enspace \ldots \enspace v_{K-1}$
 ```出力例1
 5
 ```
-![](https://u.cubeupload.com/kakurenbo/sample0001.png)
+![](https://raw.githubusercontent.com/uni-kakurenbo/TGC002/main/K-ba/images/sample-00-01.png?token=GHSAT0AAAAAAB32LAZAX36TZZRNLNT45F7IY7PKNCQ)
 
 $(l, r) \in \{\, (1, 2), (1,5), (3,4), (3,5), (4,5) \, \}$ のとき，可能です．
 
