@@ -1,18 +1,14 @@
-from collections import Counter
+def solve():
+    n, k = map(int, input().split())
+    A = sorted(map(int, input().split()))
 
+    r, ans = 0, 0
+    for l in range(n):
+        while r != n and A[r] - A[l] <= 2*k:
+            r += 1
+        ans = max(ans, r - l)
 
-n, k = map(int, input().split())
-A = [*map(int, input().split())]
+    print(ans)
 
-S = sorted(set(A))
-cnt = Counter(A)
-
-l, ans, pro_ans = S[0], 0, 0
-for r in S:
-    pro_ans += cnt[r]
-    while r - l > 2*k:
-        pro_ans -= cnt[l]
-        l += 1
-    ans = max(ans, pro_ans)
-
-print(ans)
+for _ in range(int(input())):
+    solve()
