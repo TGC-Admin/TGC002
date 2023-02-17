@@ -9,7 +9,7 @@
 数直線をイメージするとよいです．  
 これは，$x$ を中央とした幅が $2K$ の閉区間に $a$ が含まれることと等しいです．  
 
-![]()
+![](https://raw.githubusercontent.com/uni-kakurenbo/TGC002/main/Threshold/images/editorial-00-01.png?token=GHSAT0AAAAAAB32LAZADF5K3VTRBDYY6ITKY7PRRPQ)
 
 整数 $l$ に対して， $l \leq i < r$ なる任意の整数 $i$ について $A_i$ が上記の条件を満たすような最大の整数 $r$ を $R_l$ とします．  
 
