@@ -69,7 +69,7 @@ $s_N \enspace t_N \enspace u_N$
 ```出力例1
 2 19
 ```
-![](https://u.cubeupload.com/kakurenbo/3desample0001.png)
+![](https://raw.githubusercontent.com/uni-kakurenbo/TGC002/main/KyopuroFestival/images/sample-00-01.png?token=GHSAT0AAAAAAB32LAZAVEESGYHQOKDE7AEOY7PKMQQ)
 
 たとえば，$1$ 人の競プロerが $1, 3, 4$ 個目のコンテストに参加し，もう $1$ 人の競プロerが $2, 5$ 番目のコンテストに参加することで，すべてのコンテストを網羅することができます．  
 また，$2$ 人未満の競プロerでこれを達成することはできません．  
