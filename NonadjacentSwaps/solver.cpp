@@ -1,44 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(i,n) for(int i=0, i##_length=int(n); i<i##_length; ++i)
-#define REPF(i,l,r) for(auto i=(l), i##_last=(r); i<i##_last; ++i)
-
-signed main() {
-    int n; cin >> n;
-    string s, t; cin >> s >> t;
+bool solve(int n, string s, string t) {
+    if(s == t) return true;
 
     if(multiset(s.begin(), s.end()) != multiset(t.begin(), t.end())) {
-        cout << "No\n";
-        return 0;
+        return false;
     }
 
-    if(n >= 4) {
-        cout << "Yes\n";
-        return 0;
+    if(n <= 2) return false;
+
+    if(n == 3) return s[1] == t[1];
+
+    return true;
+}
+
+signed main() {
+    int $; cin >> $;
+    while($--) {
+        int n; cin >> n;
+        string s, t; cin >> s >> t;
+        cout << (solve(n, s, t) ? "Yes" : "No") << "\n";
     }
-
-    queue<string> que;
-    unordered_set<string> seen;
-
-    que.push(s), seen.insert(s);
-
-    while(not que.empty()) {
-        auto v = que.front(); que.pop();
-        if(v == t) {
-            cout << "Yes\n";
-            return 0;
-        }
-        REP(i, n) REPF(j, i+2, n) {
-            swap(v[i], v[j]);
-            if(seen.count(v)) continue;
-            seen.insert(v);
-            que.push(v);
-            swap(v[i], v[j]);
-        }
-    }
-
-    cout << "No\n" << "\n";
-
-    return 0;
 }
