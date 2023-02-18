@@ -17,7 +17,7 @@ $x \bmod Q = x - kQ$ より， $kQ \bmod P = 0$ すなわち $kQ$ が $P$ の倍
 
 したがって答えは $Q \left \lfloor \frac{K}{\mathrm{lcm}\, \{\, P,\,Q \,\}} \right \rfloor + \min \, \{\, Q, K \bmod \mathrm{lcm} \, \{\, P,\,Q \, \} \,\}$ です．
 
-![](https://raw.githubusercontent.com/uni-kakurenbo/TGC002/main/mod-p--mod-q/images/editorial-00-01.png?token=GHSAT0AAAAAAB32LAZBVL426TPV5456EYE4Y7QJP3A)
+![](https://user-images.githubusercontent.com/64454054/219830253-c129c1a9-587f-4470-9b37-9ecb937ffe86.png)
 
 # 実装例
 ```cpp:C++
