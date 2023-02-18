@@ -32,40 +32,30 @@
 
 
 # 実装例
-```cpp:C++
-#include <bits/stdc++.h>
+```cpp:C++#include <bits/stdc++.h>
 using namespace std;
 
-signed main() {
-    int n; cin >> n;
-    string s, t; cin >> s >> t;
-
-    if(s == t) {
-        cout << "Yes\n";
-        return 0;
-    }
+bool solve(int n, string s, string t) {
+    if(s == t) return true;
 
     if(multiset(s.begin(), s.end()) != multiset(t.begin(), t.end())) {
-        cout << "No\n";
-        return 0;
+        return false;
     }
 
-    if(n <= 2) {
-        cout << "No\n";
-        return 0;
-    }
+    if(n <= 2) return false;
 
-    if(n == 3) {
-        if(s[1] == t[1]) cout << "Yes\n";
-        else cout << "No\n";
-        return 0;
-    }
+    if(n == 3) return s[1] == t[1];
 
-    if(n >= 4) {
-        cout << "Yes\n";
-        return 0;
-    }
-
-    return 0;
+    return true;
 }
+
+signed main() {
+    int $; cin >> $;
+    while($--) {
+        int n; cin >> n;
+        string s, t; cin >> s >> t;
+        cout << (solve(n, s, t) ? "Yes" : "No") << "\n";
+    }
+}
+
 ```
