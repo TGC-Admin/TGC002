@@ -32,7 +32,8 @@
 
 
 # 実装例
-```cpp:C++#include <bits/stdc++.h>
+```cpp:C++
+#include <bits/stdc++.h>
 using namespace std;
 
 bool solve(int n, string s, string t) {
