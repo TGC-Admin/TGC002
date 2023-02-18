@@ -14,7 +14,7 @@ $(k+1)! - k \cdot k! = ((\cancel k+1) \cancel{- k}) \cdot k! = k!$
 $k \cdot k! = (k+1)! - k!$ と分かりました．
 
 したがって，  
-$\displaystyle f(n) \\ = \sum_{1 \leq k \leq n} (k \cdot k!) + 1 \\ = \sum_{1 \leq k \leq n}((k+1)! - k!) + 1 \\ = (\cancel{2!} - 1!) + (\cancel{3!} \cancel {- 2!}) + \cdots + ((n+1)! \cancel{- n!}) + 1\\= ((n+1)! \cancel{- 1!}) \cancel{+ 1} \\ = (n+1)!$  
+$\displaystyle f(n) \\ = \sum_{1 \leq k \leq n} (k \cdot k!) + 1 \\ = \sum_{1 \leq k \leq n}((k+1)! - k!) + 1 \\ = (\cancel{2!} - 1!) + (\cancel{3!} \cancel {- 2!}) + \cdots + ((n+1)! \cancel{- n!}) + 1 \\ = ((n+1)! \cancel{- 1!}) \cancel{+ 1} \\ = (n+1)!$  
 です．  
 
 よって「$(n+1)!$ が $2^p$ の倍数となる最大の $p$ を求めよ」という問題を解けばよいです．  
