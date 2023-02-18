@@ -60,3 +60,25 @@ signed main() {
 }
 
 ```
+
+```py:Python
+def solve(n, s, t):
+    if s == t:
+        return True
+    if sorted(s) == sorted(t):
+        return True
+    if n <= 2:
+        return False
+    if n == 3:
+        return s[1] == t[1]
+
+
+q = int(input())
+for i in range(q):
+    n = int(input())
+    s, t = map(str, input().split())
+    if solve(n, s, t):
+        print("Yes")
+    else:
+        print("No")
+```
