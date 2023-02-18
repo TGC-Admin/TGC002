@@ -65,12 +65,13 @@ signed main() {
 def solve(n, s, t):
     if s == t:
         return True
-    if sorted(s) == sorted(t):
-        return True
+    if sorted(s) != sorted(t):
+        return False
     if n <= 2:
         return False
     if n == 3:
         return s[1] == t[1]
+    return True
 
 
 q = int(input())
