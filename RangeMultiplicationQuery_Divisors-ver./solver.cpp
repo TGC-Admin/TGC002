@@ -38,7 +38,7 @@ void solve() {
 
     transform(
         powers.begin(), powers.end(),
-        ostream_iterator<int>(cout, " "),
+        ostream_iterator<ll>(cout, " "),
         [](auto& k) -> ll {
             return std::transform_reduce(begin(k), end(k), 1LL, multiplies<ll>{}, [](int e) -> ll { return e + 1; } );
         }
