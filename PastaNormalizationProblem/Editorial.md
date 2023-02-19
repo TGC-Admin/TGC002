@@ -67,4 +67,5 @@ signed main() {
         cout << solve(n, a) << "\n";
     }
 }
+
 ```
