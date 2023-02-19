@@ -77,9 +77,6 @@ def solve(n, s, t):
 for i in range(int(input())):
     n = int(input())
     s, t = map(str, input().split())
-    if solve(n, s, t):
-        print("Yes")
-    else:
-        print("No")
+    print("Yes" if solve(n, s, t) else "No")
 
 ```
