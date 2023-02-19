@@ -39,6 +39,7 @@ signed main() {
 
     cout << ans << "\n";
 }
+
 ```
 
 ```py:Python
