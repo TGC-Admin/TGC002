@@ -33,53 +33,45 @@ using namespace std;
 using ll = long long;
 
 constexpr int PRIMES[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
-constexpr int P = size(PRIMES);
 
-template<class T> std::map<T,int> factorize(T x) {
-    std::map<T,int> res;
-    for(T v=2; v*v <= x; ++v) {
-        if(x%v != 0) continue;
-        while(x%v == 0) ++res[v], x /= v;
+// 素因数分解
+valarray<int> factorize(int x) {
+    valarray<int> res(size(PRIMES));
+    REP(i, res.size()) {
+        int p = PRIMES[i];
+        while(x%p == 0) ++res[i], x /= p;
     }
-    if(x != 1) res[x] = 1;
     return res;
 }
 
 void solve() {
     int n; cin >> n;
-    vector powers(n+1, valarray<int>(P));
+    vector powers(n+1, valarray<int>(size(PRIMES)));
 
     vector<int> a(n); REP(i, n) cin >> a[i];
 
     REP(i, n) {
         auto factors = factorize(a[i]);
-        REP(j, P) {
-            powers[i][j] += factors[PRIMES[j]];
-            powers[i+1][j] -= factors[PRIMES[j]];
-        }
+        powers[i] += factors, powers[i+1] -= factors;  // imos法 (差分加算)
     }
 
     int q; cin >> q;
     REP(_, q) {
         int l, r, x; cin >> l >> r >> x; --l;
-
         auto factors = factorize(x);
-        REP(j, P) {
-            // imos法 (差分加算)
-            powers[l][j] += factors[PRIMES[j]];
-            powers[r][j] -= factors[PRIMES[j]];
+        powers[l] += factors, powers[r] -= factors;  // imos法 (差分加算)
+    }
+
+    REP(i, n) powers[i+1] += powers[i];  // imos法 (累積)
+
+    transform(
+        powers.begin(), powers.end(),
+        ostream_iterator<int>(cout, " "),
+        [](auto& k) -> ll {
+            return std::transform_reduce(begin(k), end(k), 1LL, multiplies<ll>{}, [](int e) -> ll { return e + 1; } );
         }
-    }
-
-    // imos法 (累積)
-    REP(i, n) powers[i+1] += powers[i];
-
-    REP(i, n) {
-        ll ans = 1;
-        REP(j, P) ans *= powers[i][j] + 1;
-        cout << ans << " ";
-    }
-    cout << "\n";
+    );
+    cout.seekp(-1) << "\n";
 }
 
 signed main() {
@@ -87,4 +79,5 @@ signed main() {
     while($--) solve();
     return 0;
 }
+
 ```
