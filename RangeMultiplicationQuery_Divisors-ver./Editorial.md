@@ -27,55 +27,61 @@ $A_i, x \leq 100$ より，各ベクトルの要素数は高々 $25$ といえ�
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
-using namespace std;
 
-#define REP(i,n) for(int i=0, i##_length=int(n); i<i##_length; ++i)
-using ll = long long;
+using i32 = std::int32_t;
+using i64 = std::int64_t;
 
-constexpr int PRIMES[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
+#define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
+
+constexpr i32 PRIMES[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
 
 // 素因数分解
-valarray<int> factorize(int x) {
-    valarray<int> res(size(PRIMES));
+std::valarray<i32> factorize(i32 x) {
+    std::valarray<i32> res(std::size(PRIMES));
     REP(i, res.size()) {
-        int p = PRIMES[i];
+        const i32 p = PRIMES[i];
         while(x%p == 0) ++res[i], x /= p;
     }
     return res;
 }
 
 void solve() {
-    int n; cin >> n;
-    vector powers(n+1, valarray<int>(size(PRIMES)));
+    i32 n; std::cin >> n;
+    std::vector powers(n+1, std::valarray<i32>(std::size(PRIMES)));
 
-    vector<int> a(n); REP(i, n) cin >> a[i];
+    std::vector<i32> a(n); REP(i, n) std::cin >> a[i];
 
     REP(i, n) {
-        auto factors = factorize(a[i]);
+        const auto factors = factorize(a[i]);
         powers[i] += factors, powers[i+1] -= factors;  // imos法 (差分加算)
     }
 
-    int q; cin >> q;
+    i32 q; std::cin >> q;
     REP(_, q) {
-        int l, r, x; cin >> l >> r >> x; --l;
-        auto factors = factorize(x);
+        i32 l, r, x; std::cin >> l >> r >> x; --l;
+        const auto factors = factorize(x);
         powers[l] += factors, powers[r] -= factors;  // imos法 (差分加算)
     }
 
     REP(i, n) powers[i+1] += powers[i];  // imos法 (累積)
 
-    transform(
+    std::transform(
         powers.begin(), powers.end(),
-        ostream_iterator<ll>(cout, " "),
-        [](auto& k) -> ll {
-            return std::transform_reduce(begin(k), end(k), 1LL, multiplies<ll>{}, [](int e) -> ll { return e + 1; } );
+        std::ostream_iterator<i32>(std::cout, " "),
+        [](const auto& k) -> i64 {
+            return (
+                std::transform_reduce(
+                    std::begin(k), std::end(k), 1LL,
+                    std::multiplies<i64>{}, [](const i32 e) -> i64 { return e + 1; }
+                )
+            );
         }
     );
-    cout.seekp(-1) << "\n";
+    std::cout.seekp(-1) << "\n";
 }
 
 signed main() {
-    int $; cin >> $;
+    i32 $; std::cin >> $;
     while($--) solve();
     return 0;
 }

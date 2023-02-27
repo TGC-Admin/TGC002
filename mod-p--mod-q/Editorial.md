@@ -22,20 +22,19 @@ $x \bmod Q = x - kQ$ より， $kQ \bmod P = 0$ すなわち $kQ$ が $P$ の倍
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
-using namespace std;
+using i32 = std::int32_t;
+using i64 = std::int64_t;
 
-using ll = long long;
-
-ll solve(ll p, ll q, ll k) {
-    if(p > q) swap(p, q);
-    return (k / lcm(p, q)) * q + min(q, k % lcm(p, q));
+i64 solve(i64 p, i64 q, i64 k) {
+    if(p > q) std::swap(p, q);
+    return (k / std::lcm(p, q)) * q + std::min(q, k % std::lcm(p, q));
 }
 
 signed main() {
-    int $; cin >> $;
+    i32 $; std::cin >> $;
     while($--) {
-        ll p, q, k; cin >> p >> q >> k;
-        cout << solve(p, q, k) << "\n";
+        i64 p, q, k; std::cin >> p >> q >> k;
+        std::cout << solve(p, q, k) << "\n";
     }
 }
 

@@ -34,12 +34,14 @@
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
-using namespace std;
+using i32 = std::int32_t;
+using i64 = std::int64_t;
 
-bool solve(int n, string s, string t) {
+
+bool solve(i32 n, std::string s, std::string t) {
     if(s == t) return true;
 
-    if(multiset(s.begin(), s.end()) != multiset(t.begin(), t.end())) {
+    if(std::multiset(s.begin(), s.end()) != std::multiset(t.begin(), t.end())) {
         return false;
     }
 
@@ -51,11 +53,11 @@ bool solve(int n, string s, string t) {
 }
 
 signed main() {
-    int $; cin >> $;
+    i32 $; std::cin >> $;
     while($--) {
-        int n; cin >> n;
-        string s, t; cin >> s >> t;
-        cout << (solve(n, s, t) ? "Yes" : "No") << "\n";
+        i32 n; std::cin >> n;
+        std::string s, t; std::cin >> s >> t;
+        std::cout << (solve(n, s, t) ? "Yes" : "No") << "\n";
     }
 }
 

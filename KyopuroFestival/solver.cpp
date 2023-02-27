@@ -1,20 +1,19 @@
 #include <bits/stdc++.h>
-using namespace std;
-
-using ll = long long;
-
 #include <atcoder/mincostflow>
 
-#define REP(i,n) for(int i=0, i##_length=int(n); i<i##_length; ++i)
+#define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
 #define ITR(x,v) for(const auto &x : (v))
+
+using i32 = std::int32_t;
+using i64 = std::int64_t;
 
 
 signed main() {
-    int n; cin >> n;
-    vector<int> s(n), t(n), u(n);
-    REP(i, n) cin >> s[i] >> t[i] >> u[i];
+    i32 n; std::cin >> n;
+    std::vector<i32> s(n), t(n), u(n);
+    REP(i, n) std::cin >> s[i] >> t[i] >> u[i];
 
-    atcoder::mcf_graph<int,ll> G(2*n+2);
+    atcoder::mcf_graph<i32,i64> G(2*n+2);
 
     REP(i, n) REP(j, n) {
         if(s[j] <= u[i] and u[i] < t[j]) {
@@ -29,5 +28,5 @@ signed main() {
 
     auto [ flow, cost ] = G.flow(2*n, 2*n+1);
 
-    cout << n - flow << " " << cost << "\n";
+    std::cout << n - flow << " " << cost << "\n";
 }
