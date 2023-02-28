@@ -4,7 +4,7 @@ using i32 = std::int32_t;
 using i64 = std::int64_t;
 
 
-i32 solve(i32 n, std::vector<i64>& l) {
+i32 solve(i32 n, const std::vector<i64>& l) {
     std::vector<i64> acc_l(n+1, 0);
     std::inclusive_scan(l.begin(), l.end(), std::next(acc_l.begin()));
 

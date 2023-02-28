@@ -2,7 +2,7 @@
 using i32 = std::int32_t;
 using i64 = std::int64_t;
 
-i64 solve(i64 p, i64 q, i64 k) {
+i64 solve(i64 p, i64 q, const i64 k) {
     if(p > q) std::swap(p, q);
     return (k / std::lcm(p, q)) * q + std::min(q, k % std::lcm(p, q));
 }

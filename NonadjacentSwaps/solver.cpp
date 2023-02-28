@@ -3,7 +3,7 @@ using i32 = std::int32_t;
 using i64 = std::int64_t;
 
 
-bool solve(i32 n, std::string s, std::string t) {
+bool solve(const i32 n, const std::string s, const std::string t) {
     if(s == t) return true;
 
     if(std::multiset(s.begin(), s.end()) != std::multiset(t.begin(), t.end())) {

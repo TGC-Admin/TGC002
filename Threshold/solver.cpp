@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using i32 = std::int32_t;
 
-i32 solve(i32, i32 k, std::vector<i32>& a) {
+i32 solve(i32, const i32 k, const std::vector<i32>& a) {
     std::sort(a.begin(), a.end());
 
     std::ptrdiff_t ans = 0;
