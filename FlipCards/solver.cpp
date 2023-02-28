@@ -15,15 +15,15 @@ std::vector dp0(n+1, std::vector<mint>(k+1)), dp1(n+1, std::vector<mint>(k+1));
     dp0[0][0] = dp0[0][1] = 1;
 
     REP(i, n) {
-        dp0[i+1][0] = reduce(dp0[i].begin()+1, dp0[i].end());
-        dp1[i+1][0] = reduce(dp1[i].begin()+1, dp1[i].end()) + dp0[i][0] * a[i];
+        dp0[i+1][0] = std::reduce(std::next(dp0[i].begin()), dp0[i].end());
+        dp1[i+1][0] = std::reduce(std::next(dp1[i].begin()), dp1[i].end()) + dp0[i][0] * a[i];
         REPF(j, 1, k) {
             dp0[i+1][j] = dp0[i][j-1];
             dp1[i+1][j] = dp1[i][j-1] + dp0[i][j] * b[i];
         }
     }
 
-    return reduce(dp1.rbegin()->begin(), dp1.rbegin()->end());
+    return std::reduce(dp1[n].begin(), dp1[n].end());
 }
 
 signed main() {
