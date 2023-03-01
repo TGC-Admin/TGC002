@@ -121,7 +121,7 @@ LCAはセグ木やダブリングなどを用いてクエリ毎 $O(1)$ や $O(lo
 
 # 実装例
 
-```cpp
+```cpp:C++
 #include <bits/stdc++.h>
 #include <atcoder/segtree>
 using namespace std;

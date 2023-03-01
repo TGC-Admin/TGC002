@@ -33,7 +33,7 @@
 
 
 # 実装例
-```cpp
+```cpp:C++
 #include <bits/stdc++.h>
 
 using i32 = std::int32_t;
