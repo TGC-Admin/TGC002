@@ -30,8 +30,7 @@ $2$ 数列 $A, B$ はいずれも 0-based indexing とします．
 - 結果：
     - $\sum_k \,\mathrm{DP_1}(N, k) $
 
-
-
+解説：uni_kakurenbo
 
 # 実装例
 ```cpp:C++

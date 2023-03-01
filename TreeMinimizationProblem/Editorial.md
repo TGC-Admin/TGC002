@@ -2,6 +2,7 @@
 
 複数の典型を組み合わせることが必要となる問題です.
 また，かなりの実装量があり，正確にコーディングすることが求められます．
+
 問題原案：Syntax_Error_
 
 # 解説
@@ -115,9 +116,12 @@ LCAはセグ木やダブリングなどを用いてクエリ毎 $O(1)$ や $O(lo
 
 計算量はLCAを求める部分がボトルネックとなり，ダブリングを用いると $O((N+Q)\log{N})，$ セグ木を用いると $O(N+Q\log{N})$ ，sparse tableを用いると $O(N\log{N}+Q)$  などで解くことができます．
 
+
+解説：Syntax_Error_
+
 # 実装例
 
-``` cpp
+```cpp
 #include <bits/stdc++.h>
 #include <atcoder/segtree>
 using namespace std;

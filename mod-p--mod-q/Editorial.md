@@ -19,6 +19,8 @@ $x \bmod Q = x - kQ$ より， $kQ \bmod P = 0$ すなわち $kQ$ が $P$ の倍
 
 ![](https://user-images.githubusercontent.com/64454054/219830253-c129c1a9-587f-4470-9b37-9ecb937ffe86.png)
 
+解説：uni_kakurenbo
+
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>

@@ -20,6 +20,7 @@ $\displaystyle f(n) \\ = \sum_{1 \leq k \leq n} (k \cdot k!) + 1 \\ = \sum_{1 \l
 よって「$(n+1)!$ が $2^p$ の倍数となる最大の $p$ を求めよ」という問題を解けばよいです．  
 これは**ルジャンドルの定理**を用いると $\Theta(\log N)$ 時間で可能です．  
 
+解説：uni_kakurenbo
 
 # 実装例
 ```cpp:C++

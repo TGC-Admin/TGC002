@@ -30,6 +30,7 @@
     - $S_2 = T_2$： `Yes`
     - $S_2 \not= T_2$： `No`  
 
+解説：uni_kakurenbo
 
 # 実装例
 ```cpp:C++

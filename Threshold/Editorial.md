@@ -17,6 +17,9 @@ $A = (A_1, A_2, \ldots, A_N)$ を昇順に並び替えると，$R_l$ は $l$ に
 
 このとき，$R_l - l$ の最大値が答えです．
 
+
+解説：uni_kakurenbo
+
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
