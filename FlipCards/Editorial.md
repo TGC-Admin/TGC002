@@ -35,6 +35,7 @@ $2$ 数列 $A, B$ はいずれも 0-based indexing とします．
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
+#include <boost/range/numeric.hpp>
 #include <atcoder/modint>
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
@@ -47,7 +48,6 @@ using mint = atcoder::modint998244353;
 
 mint solve(const i32 n, const i32 k, const std::vector<i32>& a, const std::vector<i32>& b) {
 std::vector dp0(n+1, std::vector<mint>(k+1)), dp1(n+1, std::vector<mint>(k+1));
-
     dp0[0][0] = dp0[0][1] = 1;
 
     REP(i, n) {
@@ -59,7 +59,7 @@ std::vector dp0(n+1, std::vector<mint>(k+1)), dp1(n+1, std::vector<mint>(k+1));
         }
     }
 
-    return std::reduce(dp1[n].begin(), dp1[n].end());
+    return boost::accumulate(dp1[n], mint{ 0 });
 }
 
 signed main() {

@@ -28,34 +28,34 @@ using i32 = std::int32_t;
 using i64 = std::int64_t;
 
 
-i32 solve(i32 n, std::vector<i64>& l) {
-    std::vector<i64> acc_l(n+1, 0);
-    std::inclusive_scan(l.begin(), l.end(), std::next(acc_l.begin()));
+i32 solve(i32 n, const std::vector<i64>& l) {
+    std::vector<i64> s = { 0 };
+    std::inclusive_scan(l.begin(), l.end(), std::back_inserter(s));
 
     i64 ans = 1;
     for(;n;n--) {
-        const i64 div_size = acc_l[n];
+        const i64 div_size = s[n];
 
-        if(*acc_l.rbegin() % div_size != 0) continue;
+        if(s.back() % div_size != 0) continue;
 
-        auto div_begin = std::next(acc_l.begin(), n);
+        auto div_begin = std::next(s.begin(), n);
         bool can_div = false;
 
         while(true) {
             i64 nxt = *div_begin + div_size;
 
-            auto itr = std::lower_bound(div_begin, acc_l.end(), nxt);
-            if(*itr != nxt or itr == acc_l.end()) break;
+            auto itr = std::lower_bound(div_begin, s.end(), nxt);
+            if(*itr != nxt or itr == s.end()) break;
 
             div_begin = itr;
 
-            if(itr == std::prev(acc_l.end())) {
+            if(itr == std::prev(s.end())) {
                 can_div = true;
                 break;
             }
         }
 
-        if(can_div) ans = std::max(ans, *acc_l.rbegin() / div_size);
+        if(can_div) ans = std::max(ans, s.back() / div_size);
     }
 
     return ans;

@@ -28,6 +28,9 @@ $A_i$ の値を，ベクトル $K_i = (k_1, k_2, k_3, \ldots)$ として持つ�
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
+#include <boost/range/numeric.hpp>
+#include <boost/range/algorithm.hpp>
+#include <boost/range/adaptor/transformed.hpp>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
@@ -66,14 +69,14 @@ void solve() {
 
     REP(i, n) powers[i+1] += powers[i];  // imos法 (累積)
 
-    std::transform(
-        powers.begin(), powers.end(),
-        std::ostream_iterator<i32>(std::cout, " "),
+    boost::transform(
+        powers, std::ostream_iterator<i32>(std::cout, " "),
         [](const auto& k) -> i64 {
             return (
-                std::transform_reduce(
-                    std::begin(k), std::end(k), 1LL,
-                    std::multiplies<i64>{}, [](const i32 e) -> i64 { return e + 1; }
+                boost::accumulate(
+                    boost::make_iterator_range(std::begin(k), std::end(k)) |
+                    boost::adaptors::transformed([](const i32 e) -> i64 { return e + 1; }),
+                    1, std::multiplies<i64>{}
                 )
             );
         }
