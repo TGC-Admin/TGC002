@@ -17,7 +17,7 @@ MojaMoja 君は現在，既に $10^{100}$ 円を所持していますが，更�
 制約
 -----
 - $2 \leq K \leq 10^5$  
-- $0 \leq T \leq 10^9$  
+- $1 \leq T \leq 10^9$  
 - $0 = d_1 < d_2 < ... < d_K \leq 10^9$  
 - $0 \leq v_i \leq 10^9 \; \scriptsize (1 \leq i < K)$
 - 入力はすべて整数である
