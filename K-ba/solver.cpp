@@ -1,57 +1,68 @@
 #include <bits/stdc++.h>
-using namespace std;
+
+#include <boost/range/adaptor/transformed.hpp>
+#include <boost/range/combine.hpp>
+#include <boost/range/algorithm.hpp>
+#include <boost/range/join.hpp>
+#include <boost/range/algorithm_ext.hpp>
+#include <boost/range/numeric.hpp>
+#include <boost/range/irange.hpp>
 
 #include <atcoder/fenwicktree>
 
-#define REP(i,n) for(int i=0, i##_length=int(n); i<i##_length; ++i)
+#define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
+#define REPF(i,l,r) for(auto i=(l), i##_last=(r); i<i##_last; ++i)
 
-using ll = long long;
+using i32 = std::int32_t;
+using i64 = std::int64_t;
 
-namespace Lib {
 
-template<class T> struct Compression : vector<int> {
-  protected:
-    vector<T> values;
+i64 solve(const i32 k, const i32 t, const std::vector<i32>& d, const std::vector<i32>& v) {
+    std::vector<i64> p = { 0 };
+    std::inclusive_scan(v.begin(), v.end(), std::back_inserter(p));
 
-  public:
-    Compression() {}
-    template<class I> Compression(const I first, const I last) {
-        this->values.assign(first, last);
-        sort(values.begin(), values.end());
-        values.erase(unique(values.begin(), values.end()), values.end());
-        this->resize(distance(first, last));
-        for(auto itr=begin(*this),val=values.begin(),e=first; e!=last; ++itr,++val,++e) {
-            *itr = distance(values.begin(), lower_bound(values.begin(), values.end(), *e));
-        }
+    std::vector<i64> s;
+    boost::transform(
+        boost::combine(p, d), std::back_inserter(s),
+        [t](const auto& e) { return t * boost::get<0>(e) - boost::get<1>(e); }
+    );
+
+    // 座標圧縮
+    std::vector<i64> s_v;
+    {
+        boost::copy(
+            boost::join(s, s | boost::adaptors::transformed([t](const i64 e) { return e - t; })),
+            std::back_inserter(s_v)
+        );
+        boost::sort(s_v);
+        s_v.erase(std::unique(s_v.begin(), s_v.end()), s_v.end());
     }
-    inline T operator()(const int val) const {
-        return values[val];
-    }
-};
 
-} // namespace Lib
+    const auto s_rank = [&s_v](const i64 v) {
+        return std::distance(s_v.begin(), boost::lower_bound(s_v, v));
+    };
+
+    atcoder::fenwick_tree<i32> cnt(k*2);
+
+    return (
+        boost::accumulate(
+            s, 0,
+            [&](const i64 acc, const i64 e) -> i64 {
+                cnt.add(s_rank(e), 1);
+                return acc + cnt.sum(0, s_rank(e - t) + 1);  // T > 0 より自分自身がカウントされることはない
+            }
+        )
+    );
+}
+
 
 signed main() {
-    int k, t; cin >> k >> t;
-    vector<ll> d(k), v(k);
-
-    REP(i, k) cin >> d[i];
-    REP(i, k-1) {
-        int r; cin >> r;
-        v[i+1] = v[i] + r;
+    i32 $; std::cin >> $;
+    while($--) {
+        i32 k, t; std::cin >> k >> t;
+        std::vector<i32> d(k), v(k-1);
+        REP(i, k) std::cin >> d[i];
+        REP(i, k-1) std::cin >> v[i];
+        std::cout << solve(k, t, d, v) << "\n";
     }
-
-    vector<ll> s(k);
-    REP(i, k) s[i] = d[i] - t*v[i];
-
-    Lib::Compression<ll> comp_s(s.begin(), s.end());
-    atcoder::fenwick_tree<int> bit(k+1);
-
-    int ans = 0;
-    REP(i, k) {
-        ans += i - bit.sum(0, comp_s[i]+1);
-        bit.add(comp_s[i], 1);
-    }
-
-    cout << ans << "\n";
 }
