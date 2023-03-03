@@ -15,7 +15,7 @@ $S = T$ とすることは可能ですか？
 
 制約
 -----
-- $1 \leq \Phi \leq 10^4$
+- $1 \leq \Phi \leq 10^5$
 - $1 \leq N$
 - $\displaystyle \sum_{1 \leq \phi \leq \Phi} \Phi_{\phi}(N) \leq 10^6$
 
@@ -37,17 +37,23 @@ $S = T$ とすることができるならば `Yes`，そうでないならば `N
 ```入力例1
 6
 3
-abc cba
+abc
+cba
 4
-abcd abcd
+abcd
+abcd
 3
-tgc agc
+tgc
+agc
 5
-bdaea abade
+bdaea
+abade
 1
-a z
+a
+z
 4
-icpc icfp
+icpc
+icfp
 ```
 ```出力例1
 Yes
