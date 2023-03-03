@@ -12,7 +12,7 @@ print(len(Args))
 print(Args)
 
 def call(id, args):
-    cmd = f"python3 gen-call.py { str(id) } { ' '.join(map(str, args)) }"
+    cmd = f"python3 tools/gen-call.py { id } { ' '.join(map(str, args)) }"
     os.popen(cmd)
 
 joblib.Parallel(n_jobs=1)(
