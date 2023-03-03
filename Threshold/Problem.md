@@ -9,8 +9,9 @@
 
 制約
 -----
+- $1 \leq \Phi \leq 10^5$  
 - $1 \leq N$  
-- $\displaystyle \sum_{1 \leq \phi \leq \Phi} \Phi_{\phi}(N) \leq 10^5$
+- $\displaystyle \sum_{1 \leq \phi \leq \Phi} \Phi_{\phi}(N) \leq 10^6$
 - $0 \leq K \leq 10^9$
 - $|A_i| \leq 10^9 \; \scriptsize (1 \leq i \leq N)$
 
