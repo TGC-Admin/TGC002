@@ -2,16 +2,17 @@
 #include <atcoder/mincostflow>
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
-#define ITR(x,v) for(const auto &x : (v))
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
 
 
-signed main() {
-    i32 n; std::cin >> n;
-    std::vector<i32> s(n), t(n), u(n);
-    REP(i, n) std::cin >> s[i] >> t[i] >> u[i];
+std::pair<i32,i64> solver(
+    const i32 n,
+    const std::vector<i32> s,
+    const std::vector<i32> t,
+    const std::vector<i32> u
+) {
 
     atcoder::mcf_graph<i32,i64> G(2*n+2);
 
@@ -26,7 +27,19 @@ signed main() {
         G.add_edge(n+i, 2*n+1, 1, 0);
     }
 
-    auto [ flow, cost ] = G.flow(2*n, 2*n+1);
+    const auto [ flow, cost ] = G.flow(2*n, 2*n+1);
+    return { n - flow, cost };
+}
 
-    std::cout << n - flow << " " << cost << "\n";
+signed main() {
+    i32 $; std::cin >> $;
+    while($--) {
+        i32 n; std::cin >> n;
+        std::vector<i32> s(n), t(n), u(n);
+        REP(i, n) std::cin >> s[i] >> t[i] >> u[i];
+
+        const auto ans = solver(n, s, t, u);
+        std::cout << ans.first << " ";
+        std::cout << ans.second << "\n";
+    }
 }
