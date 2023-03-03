@@ -6,6 +6,8 @@
 using i32 = std::int32_t;
 using i64 = std::int64_t;
 
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
+
 
 template<class T>
 struct table_impl {  // 一転取得, 区間更新 のためのモノイドと作用素を定義 (厳密にはモノイドをなさない)
@@ -38,12 +40,13 @@ i32 unique() {  // 呼び出す度に新しい値を (昇順に) 返す関数．
     return id++;
 }
 
+constexpr i32 N = 200'000;  // 高々 2*10^5 個の要素が必要．
+
 void solve() {
     i32 q; std::cin >> q;
-    const i32 n = 200'000;  // 高々 2*10^5 個の要素が必要．
 
-    table<i32> id(n); id.fill(0, n, -1);  // -1 でいずれの要素にも対応しないことを表す．
-    atcoder::dsu ds(n);
+    table<i32> id(N); id.fill(0, N, -1);  // -1 でいずれの要素にも対応しないことを表す．
+    atcoder::dsu ds(N);
 
     while(q--) {
         i32 t, x, y; std::cin >> t >> x >> y;

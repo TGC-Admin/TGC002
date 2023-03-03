@@ -10,6 +10,9 @@ using i64 = std::int64_t;
 
 using mint = atcoder::modint998244353;
 
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
+
+
 mint solve(const i32 n, const i32 k, const std::vector<i32>& a, const std::vector<i32>& b) {
 std::vector dp0(n+1, std::vector<mint>(k+1)), dp1(n+1, std::vector<mint>(k+1));
     dp0[0][0] = dp0[0][1] = 1;

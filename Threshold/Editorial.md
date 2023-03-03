@@ -23,24 +23,33 @@ $A = (A_1, A_2, \ldots, A_N)$ を昇順に並び替えると，$R_l$ は $l$ に
 # 実装例
 ```cpp:C++
 #include <bits/stdc++.h>
-using namespace std;
 
-#define REP(i,n) for(int i=0, i##_length=int(n); i<i##_length; ++i)
-#define REPF(i,l,r) for(auto i=(l), i##_last=(r); i!=i##_last; ++i)
+using i32 = std::int32_t;
 
-signed main() {
-    int n, k; cin >> n >> k;
-    vector<int> a(n); REP(i, n) cin >> a[i];
-    sort(a.begin(), a.end());
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
-    ptrdiff_t ans = 0;
+
+i32 solve(i32, const i32 k, const std::vector<i32>& a) {
+    std::sort(a.begin(), a.end());
+
+    std::ptrdiff_t ans = 0;
+
     auto r = a.begin();
-    REPF(l, a.begin(), a.end()) {
+    for(auto l=a.begin(); l<a.end(); ++l) {
         while(r != a.end() and *r - *l <= 2*k) r++;
-        ans = max(ans, r - l);
+        ans = std::max(ans, r - l);
     }
 
-    cout << ans << "\n";
+    return ans;
+}
+
+signed main() {
+    i32 $; std::cin >> $;
+    while($--) {
+        i32 n, k; std::cin >> n >> k;
+        std::vector<i32> a(n); for(auto& v : a) std::cin >> v;
+        std::cout << solve(n, k, a) << "\n";
+    }
 }
 
 ```
