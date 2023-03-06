@@ -22,4 +22,4 @@ for phi in range(Phi):
     T = input()
     assert len(S) == len(T) == N
 
-assert N_sum <= 10 ** 6
+assert N_sum <= 10 ** 5

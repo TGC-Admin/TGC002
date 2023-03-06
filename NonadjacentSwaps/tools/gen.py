@@ -5,9 +5,11 @@ import joblib
 
 Args = []
 
-for p in range(0, 6):
-    Args.append((10 ** p, 0))
-    Args.append((10 ** p, -1))
+for p in range(0, 5):
+    for _ in range(5 // (p+1)):
+        Args.append((10 ** p, 0))
+    for _ in range(5 // (p+1) + 1):
+        Args.append((10 ** p, -1))
 
 print(len(Args))
 print(Args)

@@ -6,7 +6,7 @@ using i64 = std::int64_t;
 __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
 
-bool solve(const i32 n, const std::string s, const std::string t) {
+bool solve(const i32 n, const std::string& s, const std::string& t) {
     if(s == t) return true;
 
     if(std::multiset(s.begin(), s.end()) != std::multiset(t.begin(), t.end())) {
