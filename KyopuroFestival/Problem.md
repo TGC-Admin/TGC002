@@ -38,18 +38,20 @@ $i$ 個目のコンテストは，時刻 $s_i$ から時刻 $t_i$ まで参加�
 
 制約
 -----
-- $1 \leq N \leq 50$
-- $0 \leq s_i < t_i < u_i \leq 10^9 \scriptsize \; (1 \leq i \leq N)$
+- $\Phi = 1$
+- $1 < N \leq 50$
+- $0 \leq s_i < t_i < u_i < 2^{30} \scriptsize \; (1 \leq i \leq N)$
 
 入力
 -----
-入力は以下の形式で標準入力から与えられる．
+各テストケースの入力は，それぞれ以下の形式で与えられる：
 ```md
 $N$  
 $s_1 \enspace t_1 \enspace u_1$  
 $s_2 \enspace t_2 \enspace u_2$  
 $\vdots$  
 $s_N \enspace t_N \enspace u_N$  
+
 ```
 
 出力
@@ -66,11 +68,13 @@ $s_N \enspace t_N \enspace u_N$
 3 6 14
 13 22 25
 7 18 24
+
 ```
 ```出力例1
 2 19
+
 ```
-![](https://raw.githubusercontent.com/uni-kakurenbo/TGC002/main/KyopuroFestival/images/sample-00-01.png?token=GHSAT0AAAAAAB32LAZAVEESGYHQOKDE7AEOY7PKMQQ)
+![](https://user-images.githubusercontent.com/64454054/223031746-a9898e11-4bb3-45cb-8fea-88823ad252f4.png)
 
 たとえば，$1$ 人の競プロerが $1, 3, 4$ 個目のコンテストに参加し，もう $1$ 人の競プロerが $2, 5$ 番目のコンテストに参加することで，すべてのコンテストを網羅することができます．  
 また，$2$ 人未満の競プロerでこれを達成することはできません．  
@@ -82,11 +86,13 @@ $s_N \enspace t_N \enspace u_N$
 1
 3
 1 2 3
-2 3 4
 4 5 6
+6 7 8
+
 ```
 ```出力例2
 2 1
+
 ```
 
 $1$ 個目のコンテストに参加した競プロerは，そのコンテストが終了した直後にいずれのコンテストにも参加することができません．したがって爆発します．  

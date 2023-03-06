@@ -19,7 +19,7 @@ std::pair<i32,i64> solver(
     atcoder::mcf_graph<i32,i64> G(2*n+2);
 
     REP(i, n) REP(j, n) {
-        if(s[j] <= u[i] and u[i] < t[j]) {
+        if(s[j] <= u[i] and u[i] <= t[j]) {
             G.add_edge(i, n+j, 1, t[j] - u[i]);
         }
     }
