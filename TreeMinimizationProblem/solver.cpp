@@ -108,7 +108,7 @@ struct LowestCommonAncestor {
 
 } // namespace Lib
 
-signed main() {
+void solve() {
     int n; cin >> n;
     Lib::Graph G(n);
 
@@ -154,4 +154,9 @@ signed main() {
     }
 
     cout << min(sum_cost, sum_cost - max_contrib) << "\n";
+}
+
+signed main() {
+    int $; std::cin >> $;
+    while($--) solve();
 }
