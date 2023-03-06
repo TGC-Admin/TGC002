@@ -17,11 +17,13 @@ N, Q = 0, 0
 for phi in range(Phi):
     debug(phi)
     n = int(input())
+    assert 1 < n <= 10 ** 4
     for i in range(2, n+1):
         p, w = map(int, input().split())
         assert 1 <= p < i
         assert abs(w) <= 10 ** 6
     q = int(input())
+    assert 1 <= q
     for i in range(q):
         a, b = map(int, input().split())
         assert 1 <= a < b <= n
