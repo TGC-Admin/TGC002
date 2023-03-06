@@ -13,9 +13,9 @@ bool solve(const i32 n, const i64 m, std::vector<i32>& d) {
     i64 sup = 0;
     for(const auto [ v, c ] : cnt) {
         if(v == 0) continue;
-        sup += c * (c - 1) / 2;
+        sup += 1LL * c * (c - 1) / 2;
         if(not cnt.count(v-1)) return false;
-        sup += cnt[v-1] * c;
+        sup += 1LL * cnt[v-1] * c;
     }
 
     return n-1 <= m and m <= sup;
