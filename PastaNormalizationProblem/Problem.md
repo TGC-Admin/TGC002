@@ -14,15 +14,16 @@ $N$ 個の**小パスタ**が繋がってできた**大パスタ**がありま�
 -----
 - $1 \leq \Phi \leq 10^5$
 - $1 \leq N$
-- $\displaystyle \sum_{1 \leq \phi \leq \Phi} \Phi_{\phi}(N) \leq 10^5$
+- $\sum_{\phi} \Phi_{\phi}(N) \leq 10^5$
 - $1 \leq L_i \leq 10^9 \; \scriptsize (1 \leq i \leq N)$
 
 入力
 -----
-入力は以下の形式で標準入力から与えられる．
+各テストケースの入力は，それぞれ以下の形式で与えられる：
 ```md
 $N$  
-$L_1 \enspLce L_2 \enspLce \ldots \enspLce L_N$  
+$L_1 \enspace L_2 \enspace \ldots \enspace L_N$  
+
 ```
 
 出力
@@ -37,6 +38,7 @@ $L_1 \enspLce L_2 \enspLce \ldots \enspLce L_N$
 1 2 3 2 4 4 2 6
 5
 1 2 3 4 5
+
 ```
 ```出力例1
 4
