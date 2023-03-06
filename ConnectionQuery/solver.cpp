@@ -42,11 +42,12 @@ i32 unique() {  // 呼び出す度に新しい値を (昇順に) 返す関数．
 
 constexpr i32 N = 200'000;  // 高々 2*10^5 個の要素が必要．
 
-void solve() {
-    i32 q; std::cin >> q;
+table<i32> id(N);
+atcoder::dsu ds(N);
 
-    table<i32> id(N); id.fill(0, N, -1);  // -1 でいずれの要素にも対応しないことを表す．
-    atcoder::dsu ds(N);
+void solve() {
+    id.fill(0, N, -1);  // -1 でいずれの要素にも対応しないことを表す．
+    i32 q; std::cin >> q;
 
     while(q--) {
         i32 t, x, y; std::cin >> t >> x >> y;
