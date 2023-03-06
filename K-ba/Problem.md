@@ -11,24 +11,26 @@ MojaMoja 君は現在，既に $10^{100} \; \scriptsize \mathrm{[円]}$ を所�
 - ゲームをクリアしたとき，場 $i$ と場 $i+1$ との間を通過したごとに，報酬として $v_i \; \scriptsize \mathrm{[円]}$ を得る．$\scriptsize (1 \leq i < K)$
 - $T \; \scriptsize \mathrm{[秒]}$ 以内に到達できなかった場合の報酬はない．
 
-適切に馬を改造することで，報酬として得る金額から，そのための馬の改造に費やした金額を引いた差額(利益)を，正とすることができるような $l,r \; \scriptsize (l < r)$ の選び方は何通りあるでしょうか？  
+適切に馬を改造することによって「『報酬として得る金額』から『そのための馬の改造に費やした金額』を引いた差額」(利益) を正とすることができるような $l,r \; \scriptsize (l < r)$ の選び方は何通りあるでしょうか？  
 求めてください．
 
 制約
 -----
-- $2 \leq K \leq 10^5$  
-- $1 \leq T \leq 10^9$  
-- $0 = d_1 < d_2 < ... < d_K \leq 10^9$  
-- $0 \leq v_i \leq 10^9 \; \scriptsize (1 \leq i < K)$
-- 入力はすべて整数である
+- $1 \leq \Phi \leq 10^5$
+- $1 < K$  
+- $\sum_{\phi} \Phi_{\phi}(K) \leq 10^5$
+- $0 < T < 2^{30}$  
+- $0 = d_1 < d_2 < ... < d_K < 2^{30}$  
+- $0 \leq v_i < 2^{30} \; \scriptsize (1 \leq i < K)$
 
 入力
 -----
-入力は以下の形式で標準入力から与えられる．
+各テストケースの入力は，それぞれ以下の形式で与えられる：
 ```md
-$K T$  
-$d_1 \enspace d_2 \enspace \ldots \enspace d_K$  
+$K \enspace T$  
+$d_1 \enspace d_2 \enspace \ldots \enspace d_{K-1} \enspace d_K$  
 $v_1 \enspace v_2 \enspace \ldots \enspace v_{K-1}$
+
 ```
 
 出力
@@ -42,9 +44,11 @@ $v_1 \enspace v_2 \enspace \ldots \enspace v_{K-1}$
 5 3
 0 7 16 21 25
 3 1 2 3
+
 ```
 ```出力例1
-4
+2
+
 ```
 ![](https://user-images.githubusercontent.com/64454054/219830282-55d7b110-d7cc-4aa2-938f-c023d789af52.png)
 
