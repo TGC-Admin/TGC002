@@ -20,11 +20,13 @@ signed main(const int, const char *argv[]) {
 
     i32 n = std::stoi(argv[2]);
     i32 k = std::stoi(argv[3]);
+    i32 inf = -std::pow(10, rng(0, 10));
+    i32 sup = std::pow(10, rng(0, 10)) + 1;
 
     std::cout << n << " " << k << "\n";
 
     std::vector<i32> a(n);
-    REP(i, n) a[i] = rng(-1'000'000'000, 1'000'000'000 + 1);
+    REP(i, n) a[i] = rng(inf, sup);
 
     print(a);
 

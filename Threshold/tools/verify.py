@@ -23,4 +23,4 @@ for phi in range(Phi):
     assert all(abs(a) <= 10 ** 9 for a in A)
     assert len(A) == N
 
-assert N_sum <= 10 ** 6
+assert N_sum <= 10 ** 5
