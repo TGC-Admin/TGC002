@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
+#include <atcoder/modint>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
+using mint = atcoder::modint998244353;
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
 
@@ -21,12 +23,7 @@ void solve() {
     i32 n; std::cin >> n;
     std::vector powers(n+1, std::valarray<i32>(std::size(PRIMES)));
 
-    std::vector<i32> a(n); REP(i, n) std::cin >> a[i];
-
-    REP(i, n) {
-        const auto factors = factorize(a[i]);
-        powers[i] += factors, powers[i+1] -= factors;  // imos法 (差分加算)
-    }
+    std::vector<i32> a(n, 1);
 
     i32 q; std::cin >> q;
     REP(_, q) {
@@ -39,17 +36,17 @@ void solve() {
 
     std::transform(
         powers.begin(), std::prev(powers.end()),
-        std::ostream_iterator<i32>(std::cout, " "),
-        [](const auto& k) -> i64 {
+        std::ostream_iterator<i64>(std::cout, " "),
+        [](const auto& k) -> i32 {
             return (
                 std::transform_reduce(
                     std::begin(k), std::end(k),
-                    1, std::multiplies<i64>{}, [](const i32 e) -> i64 { return e + 1; }
-                )
+                    mint{1}, std::multiplies<mint>{}, [](const i32 e) -> mint { return e + 1; }
+                ).val()
             );
         }
     );
-    std::cout.seekp(-1, std::ios_base::cur) << "\n";
+    std::cout << "\n";
 }
 
 signed main() {
