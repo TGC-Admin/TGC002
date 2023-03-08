@@ -1,4 +1,12 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <valarray>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <functional>
+
 #include <atcoder/modint>
 
 using i32 = std::int32_t;
@@ -6,6 +14,9 @@ using i64 = std::int64_t;
 using mint = atcoder::modint998244353;
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
+
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
+
 
 constexpr i32 PRIMES[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
 

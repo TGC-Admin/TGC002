@@ -8,10 +8,12 @@
 操作後の $A$ の要素は非常に大きくなりうるため，実際に操作を再現して答えを求めることは難しいです．  
 別なアプローチを考えてみましょう．  
 
-$P_i$ を $i$ 番目に小さい素数として，整数 $X = P_1^{k_1} \cdot P_2^{k_2} \cdot P_3^{k_3} \cdots$ の約数の個数は $(k_1 + 1) (k_2 + 1) (k_3 + 1) \cdots$ と表されます．  
+$P_i$ を $i$ 番目に小さい素数とします．
+
+整数 $X = P_1^{k_1} \cdot P_2^{k_2} \cdot P_3^{k_3} \cdots$ の約数の個数は $(k_1 + 1) (k_2 + 1) (k_3 + 1) \cdots$ と表されます．  
 $X$ のもつ $i$ 番目の素因数を $0$ 個以上 $k_i$ 個以下選ぶ組み合わせの総数です．
 
-$A_i$ の値を，ベクトル $K_i = (k_1, k_2, k_3, \ldots)$ として持つことを考えます．  
+$A_i = P_1^{k_1} \cdot P_2^{k_2} \cdot P_3^{k_3} \cdots$ の値を，ベクトル $K_i = (k_1, k_2, k_3, \ldots)$ として持つことを考えます．  
 
 すると，$Q$ 回の操作は各々次のように言い換えることができます：
 - $x \eqqcolon P_1^{c_1} \cdot P_2^{c_2} \cdot P_3^{c_3} \cdots$ とする．
@@ -19,15 +21,24 @@ $A_i$ の値を，ベクトル $K_i = (k_1, k_2, k_3, \ldots)$ として持つ�
     - $K_i$ を $K_i + (c_1, c_2, c_3, \ldots)$ で置換する．
 
 以上の操作はimos法を用いるなどして簡単に実装できます．  
-実際は $A_i, x \leq 100$ より各ベクトルの要素数は高々 $25$ で十分と分かります．これは $100$ 以下の素数の個数です．  
 
 求めるべきは，$E = (1, 1, 1, \ldots)$ として，$D_i = E \cdot (K_i + E))$ です．
+
+なお実際には $A_i, x \leq 100$ より各ベクトルの要素数は高々 $25$ で十分と分かります．これは $100$ 以下の素数の個数です．  
 
 解説：uni_kakurenbo
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <valarray>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <functional>
+
 #include <atcoder/modint>
 
 using i32 = std::int32_t;
@@ -35,6 +46,9 @@ using i64 = std::int64_t;
 using mint = atcoder::modint998244353;
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
+
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
+
 
 constexpr i32 PRIMES[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 };
 
