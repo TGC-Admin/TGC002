@@ -1,16 +1,19 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
 
-// __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
+__attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
-#include "template.hpp"
 
 i32 solve(i32 n, const std::vector<i64>& l) {
     std::vector<i64> s = { 0 };
     std::inclusive_scan(l.begin(), l.end(), std::back_inserter(s));
-    debug(s[n]);
 
     i64 ans = 1;
     for(;n;n--) {

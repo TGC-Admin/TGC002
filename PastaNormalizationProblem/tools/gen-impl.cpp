@@ -23,7 +23,7 @@ signed main(const int, const char *argv[]) {
 
   top:
     i32 p = rng(0, 31);
-    i64 sup = std::min(1'000'000'000, 1 << p) + 1;
+    i64 sup = std::min(100, 1 << p) + 1;
 
     std::vector<i32> a;
     if(type == 0) {
@@ -31,7 +31,7 @@ signed main(const int, const char *argv[]) {
         REP(i, n) a[i] = rng(1, sup);
     }
     if(type == 1) {
-        i64 div_sup = 100;
+        i64 div_sup = 1000;
 
         if(rng(1) == 0) chmax(div_sup, sup);
         else chmax(div_sup, sup * n);

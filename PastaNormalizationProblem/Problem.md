@@ -1,3 +1,9 @@
+**この問題はサンプルです**  
+
+注意
+===
+[**Sample 0**](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_S0.000) の注意事項を先にお読みください。
+
 問題文
 =====
 $N$ 個の**小パスタ**が繋がってできた**大パスタ**があります．  
@@ -15,7 +21,7 @@ $N$ 個の**小パスタ**が繋がってできた**大パスタ**がありま�
 - $1 \leq \Phi \leq 10^5$
 - $1 \leq N$
 - $\sum_{\phi} \Phi_{\phi}(N) \leq 10^5$
-- $1 \leq L_i \leq 10^9 \; \scriptsize (1 \leq i \leq N)$
+- $1 \leq L_i \leq 100 \; \scriptsize (1 \leq i \leq N)$
 
 入力
 -----
@@ -43,6 +49,10 @@ $L_1 \enspace L_2 \enspace \ldots \enspace L_N$
 ```出力例1
 4
 1
+
 ```
 1. $1+2+3 = 2+4 = 4+2 = 6$ であるので，長さ $6$ の中パスタ $4$ つに分割することができます．(他に，たとえば長さ $8$ の中パスタ $3$ つに分割することもできますが，$4$ が最大です．)
 2. 長さが $\sum L$ の中パスタ $1$ つに分割することができます．
+
+---
+[Sample 2](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_S2.000) はこちら

@@ -19,7 +19,7 @@ for phi in range(Phi):
     N = int(input())
     assert 1 <= N
     A = [*map(int, input().split())]
-    assert all(1 <= a <= 10 ** 9 for a in A)
+    assert all(1 <= a <= 100 for a in A)
     assert len(A) == N
 
 assert N_sum <= 10 ** 5
