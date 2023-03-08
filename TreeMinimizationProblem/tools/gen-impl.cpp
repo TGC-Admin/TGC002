@@ -23,9 +23,16 @@ signed main(const int, const char *argv[]) {
     i32 w_inf = -std::min(1'000'000, 1 << rng(21));
     i32 w_sup = std::min(1'000'000, 1 << rng(21)) + 1;
 
+    i32 type = rng(2);
+
     std::vector<std::pair<i32,i32>> pw(n);
     REP(i, 1, n) {
-        pw[i].first = rng(i) + 1;
+        if(i <= 10 or type == 0) {
+            pw[i].first = rng(i) + 1;
+        }
+        else {
+            pw[i].first = (i + rng(-10, 0)) / 2 * 2 + i%2;
+        }
         pw[i].second = rng(w_inf, w_sup);
     }
 

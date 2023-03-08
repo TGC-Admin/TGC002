@@ -48,41 +48,42 @@ class LowerCommonAncestor(object):
             fu, fv = fv, fu
         return self.S[min(self._query(fu, fv+1))[1]]
 
-n = int(input())
+for _ in range(int(input())):
+    n = int(input())
 
-G = [list(()) for _ in [0] * n]
-for i in range(1, n):
-    p, w = map(int, input().split())
-    p -= 1
-    G[p].append((i, w))
+    G = [list(()) for _ in [0] * n]
+    for i in range(1, n):
+        p, w = map(int, input().split())
+        p -= 1
+        G[p].append((i, w))
 
-lca = LowerCommonAncestor(G)
+    lca = LowerCommonAncestor(G)
 
-diff = [0] * n
+    diff = [0] * n
 
-q = int(input())
-for _ in [0] * q:
-    a, b = map(int, input().split())
-    a -= 1
-    b -= 1
-    diff[a] += 1
-    diff[b] += 1
-    diff[lca.query(a, b)] -= 2
+    q = int(input())
+    for _ in [0] * q:
+        a, b = map(int, input().split())
+        a -= 1
+        b -= 1
+        diff[a] += 1
+        diff[b] += 1
+        diff[lca.query(a, b)] -= 2
 
-cnt = [0] * n
-def dfs(v):
-    acc = 0
-    for nv, w in G[v]:
-        acc += dfs(nv)
-    cnt[v] = acc + diff[v]
-    return cnt[v]
-dfs(0)
+    cnt = [0] * n
+    def dfs(v):
+        acc = 0
+        for nv, w in G[v]:
+            acc += dfs(nv)
+        cnt[v] = acc + diff[v]
+        return cnt[v]
+    dfs(0)
 
-sum_cost, max_contrib = 0, -10**100
-for v in range(n):
-    for nv, w in G[v]:
-        cntrib = cnt[nv] * w
-        sum_cost += cntrib
-        max_contrib = max(max_contrib, cntrib)
+    sum_cost, max_contrib = 0, -10**100
+    for v in range(n):
+        for nv, w in G[v]:
+            cntrib = cnt[nv] * w
+            sum_cost += cntrib
+            max_contrib = max(max_contrib, cntrib)
 
-print(min(sum_cost, sum_cost - max_contrib))
+    print(min(sum_cost, sum_cost - max_contrib))
