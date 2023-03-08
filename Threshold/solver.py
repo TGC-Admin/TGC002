@@ -1,4 +1,4 @@
-def solve():
+for _ in range(int(input())):
     n, k = map(int, input().split())
     A = sorted(map(int, input().split()))
 
@@ -9,6 +9,3 @@ def solve():
         ans = max(ans, r - l)
 
     print(ans)
-
-for _ in range(int(input())):
-    solve()

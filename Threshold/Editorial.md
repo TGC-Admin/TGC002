@@ -22,14 +22,19 @@ $A = (A_1, A_2, \ldots, A_N)$ を昇順に並び替えると，$R_l$ は $l$ に
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
 
 using i32 = std::int32_t;
 
 __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
 
-i32 solve(i32, const i32 k, const std::vector<i32>& a) {
+i32 solve(i32, const i32 k, std::vector<i32>& a) {
     std::sort(a.begin(), a.end());
 
     std::ptrdiff_t ans = 0;
@@ -55,7 +60,7 @@ signed main() {
 ```
 
 ```py:Python
-def solve():
+for _ in range(int(input())):
     n, k = map(int, input().split())
     A = sorted(map(int, input().split()))
 
@@ -67,6 +72,4 @@ def solve():
 
     print(ans)
 
-for _ in range(int(input())):
-    solve()
 ```

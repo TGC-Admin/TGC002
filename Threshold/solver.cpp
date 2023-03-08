@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
 
 using i32 = std::int32_t;
 
