@@ -1,7 +1,5 @@
 # 概要
-サンプル問題です．  
-テストケースの容量削減等を目的としてマルチテスト方式を導入しました．  
-見慣れない方もいらっしゃると思いますので，その練習になれば幸いです．
+これも没問を蘇生させたものです．
 
 問題原案：uni_kakurenbo
 
@@ -9,7 +7,7 @@
 Union-Find に併せて一点取得および区間更新のできるデータ構造を用いることで解けます．  
 
 適当なテーブルで，グラフの頂点からの集合の要素への対応を管理します．  
-$t = 1$ のクエリにおいては，どの要素にも対応しないことを表す値で対象となる要素を更新することで実現できます．  
+$t = 1$ のクエリにおいては，どの要素にも対応しないことを表す値で対象となる区間を更新することで実現できます．  
 実装例も参照してください．  
 
 なお，平衡二分探索木などによって頂点と要素との対応を管理することでも正解できます．
@@ -20,6 +18,9 @@ $t = 1$ のクエリにおいては，どの要素にも対応しないことを
 ```cpp:C++
 #include <cstdint>
 #include <optional>
+#include <ios>
+#include <iostream>
+
 #include <atcoder/lazysegtree.hpp>
 #include <atcoder/dsu.hpp>
 
@@ -30,7 +31,7 @@ __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(f
 
 
 template<class T>
-struct table_impl {  // 一転取得, 区間更新 のためのモノイドと作用素を定義 (厳密にはモノイドをなさない)
+struct table_impl {  // 一点取得, 区間更新 のためのモノイドと作用素を定義 (厳密にはモノイドをなさない)
     using value_type = T;
     using action_type = std::optional<T>;
 

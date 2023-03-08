@@ -1,5 +1,8 @@
 #include <cstdint>
 #include <optional>
+#include <ios>
+#include <iostream>
+
 #include <atcoder/lazysegtree.hpp>
 #include <atcoder/dsu.hpp>
 
@@ -10,7 +13,7 @@ __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(f
 
 
 template<class T>
-struct table_impl {  // 一転取得, 区間更新 のためのモノイドと作用素を定義 (厳密にはモノイドをなさない)
+struct table_impl {  // 一点取得, 区間更新 のためのモノイドと作用素を定義 (厳密にはモノイドをなさない)
     using value_type = T;
     using action_type = std::optional<T>;
 
