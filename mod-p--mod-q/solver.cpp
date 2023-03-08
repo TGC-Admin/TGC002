@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <utility>
+#include <numeric>
+#include <functional>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;

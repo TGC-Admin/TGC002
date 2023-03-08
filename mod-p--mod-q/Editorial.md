@@ -8,7 +8,7 @@ $P \leq Q$ としても一般性は保たれますから，以下は $P \leq Q$ 
 
 $x \bmod P < P \leq Q$ より $(x \bmod P) \bmod Q = x \bmod P$ ですから，条件 $x \bmod P = (x \bmod Q) \bmod P$ を満たす $K$ 未満の非負整数 $x$ の個数を求めればよいです．
 
-非負整数 $k$ に対して $kQ \leq x < (k + 1)Q$ の場合を考えます．(これですべての場合を網羅できます)  
+非負整数 $k$ に対して $kQ \leq x < (k + 1)Q$ の場合を考えます．(これですべての場合を網羅できます．)  
 
 $x \bmod Q = x - kQ$ より， $kQ \bmod P = 0$ すなわち $kQ$ が $P$ の倍数であることが必要十分です．  
 これは $k$ が $\frac{P}{\gcd \, \{\, P,\,Q \,\}}$ の倍数であると言い換えることができます．  
@@ -17,13 +17,18 @@ $x \bmod Q = x - kQ$ より， $kQ \bmod P = 0$ すなわち $kQ$ が $P$ の倍
 
 したがって答えは $Q \left \lfloor \frac{K}{\mathrm{lcm}\, \{\, P,\,Q \,\}} \right \rfloor + \min \, \{\, Q, K \bmod \mathrm{lcm} \, \{\, P,\,Q \, \} \,\}$ です．
 
-![](https://user-images.githubusercontent.com/64454054/219830253-c129c1a9-587f-4470-9b37-9ecb937ffe86.png)
+![](https://user-images.githubusercontent.com/64454054/223131474-a4dc0d6f-ffb9-4baa-9ca3-3be209daacc8.png)
 
 解説：uni_kakurenbo
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <utility>
+#include <numeric>
+#include <functional>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
