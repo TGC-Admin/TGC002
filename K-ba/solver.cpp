@@ -1,4 +1,10 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <iterator>
+#include <vector>
+#include <algorithm>
+#include <numeric>
 
 #include <boost/range/adaptor/transformed.hpp>
 #include <boost/range/combine.hpp>

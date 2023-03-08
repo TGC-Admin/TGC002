@@ -43,7 +43,13 @@ $O(K \log K)$ 時間などで解くことができます．
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <iterator>
+#include <vector>
+#include <algorithm>
+#include <numeric>
 
 #include <boost/range/adaptor/transformed.hpp>
 #include <boost/range/combine.hpp>
@@ -71,7 +77,7 @@ i64 solve(const i32 k, const i32 t, const std::vector<i32>& d, const std::vector
     std::vector<i64> s;
     boost::transform(
         boost::combine(p, d), std::back_inserter(s),
-        [t](const auto& e) { return t * boost::get<0>(e) - boost::get<1>(e); }
+        [t](const auto& e) { return 1LL * t * boost::get<0>(e) - boost::get<1>(e); }
     );
 
     // 座標圧縮
@@ -93,7 +99,7 @@ i64 solve(const i32 k, const i32 t, const std::vector<i32>& d, const std::vector
 
     return (
         boost::accumulate(
-            s, 0,
+            s, 0LL,
             [&](const i64 acc, const i64 e) -> i64 {
                 cnt.add(s_rank(e), 1);
                 return acc + cnt.sum(0, s_rank(e - t) + 1);  // T > 0 より自分自身がカウントされることはない
