@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+
 #include <atcoder/mincostflow>
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)

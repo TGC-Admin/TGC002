@@ -20,7 +20,11 @@ DAG における最小道被覆問題が，最大二部マッチング問題，�
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+
 #include <atcoder/mincostflow>
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)
@@ -41,7 +45,7 @@ std::pair<i32,i64> solver(
     atcoder::mcf_graph<i32,i64> G(2*n+2);
 
     REP(i, n) REP(j, n) {
-        if(s[j] <= u[i] and u[i] < t[j]) {
+        if(s[j] <= u[i] and u[i] <= t[j]) {
             G.add_edge(i, n+j, 1, t[j] - u[i]);
         }
     }
