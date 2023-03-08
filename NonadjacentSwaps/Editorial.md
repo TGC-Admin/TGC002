@@ -34,7 +34,11 @@
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <string>
+#include <set>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
@@ -79,7 +83,7 @@ def solve(n, s, t):
         return s[1] == t[1]
     return True
 
-for i in range(int(input())):
+for i in [0] * int(input()):
     n = int(input())
     s, t = map(str, input().split())
     print("Yes" if solve(n, s, t) else "No")
