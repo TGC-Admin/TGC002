@@ -1,5 +1,11 @@
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <vector>
+#include <numeric>
+
 #include <boost/range/numeric.hpp>
+
 #include <atcoder/modint>
 
 #define REP(i,n) for(i32 i=0, i##_length=i32(n); i<i##_length; ++i)

@@ -23,8 +23,8 @@ $2$ 数列 $A, B$ はいずれも 0-based indexing とします．
     - $\text{For} \;\,i \gets [\, 0, 1, \ldots, N\,):$
         - $\mathrm{DP_0}(i+1, 0) \gets \sum\, \{\, \mathrm{DP_0}(i,j) \mid 1 \leq j < k \,\}$　#任意の枚数裏が連続 → 表
         - $\mathrm{DP_1}(i+1, 0) \gets \sum\, \{\, \mathrm{DP_1}(i, j) \mid 1 \leq j < k \,\} + \mathrm{DP_0}(i,0) \cdot A_i$
-        - $\text{For} \;\,j \gets [\, 1, 2, \ldots, K\,):$
-            - $\mathrm{DP_0}(i+1, j) \gets \mathrm{DP_0}(i, j-1)$　# $j$ 枚裏が連続 → $j+1$ 枚裏が連続
+        - $\text{For} \;\,j \gets [\, 1, 2, \ldots, K\,]:$
+            - $\mathrm{DP_0}(i+1, j) \gets \mathrm{DP_0}(i, j-1)$　# $j-1$ 枚裏が連続 → $j$ 枚裏が連続
             - $\mathrm{DP_1}(i+1, j) \gets \mathrm{DP_1}(i, j-1) + \mathrm{DP_0}(i, j) \cdot B_i$
 
 - 結果：
@@ -34,7 +34,11 @@ $2$ 数列 $A, B$ はいずれも 0-based indexing とします．
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
+#include <algorithm>
+
 #include <boost/range/numeric.hpp>
 #include <atcoder/modint>
 
@@ -75,5 +79,34 @@ signed main() {
         std::cout << solve(n, k, a, b).val() << "\n";
     }
 }
+
+```
+
+```py:Python
+from functools import reduce
+
+def add(a, b):
+    return (a + b) % MOD
+
+MOD = 998244353
+
+for _ in [0] * int(input()):
+    n, k = map(int, input().split())
+    A = [*map(int, input().split())]
+    B = [*map(int, input().split())]
+
+    dp0 = [[0] * (k+1) for _ in [0] * (n+1)]
+    dp1 = [[0] * (k+1) for _ in [0] * (n+1)]
+
+    dp0[0][0] = dp0[0][1] = 1
+
+    for i in range(n):
+        dp0[i+1][0] = reduce(add, dp0[i][1:])
+        dp1[i+1][0] = reduce(add, dp1[i][1:]) + dp0[i][0] * A[i] % MOD
+        for j in range(1, k+1):
+            dp0[i+1][j] = dp0[i][j-1]
+            dp1[i+1][j] = dp1[i][j-1] + dp0[i][j] * B[i] % MOD
+
+    print(reduce(add, dp1[n]))
 
 ```
