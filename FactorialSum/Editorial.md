@@ -24,7 +24,9 @@ $\displaystyle f(n) \\ = \sum_{1 \leq k \leq n} (k \cdot k!) + 1 \\ = \sum_{1 \l
 
 # 実装例
 ```cpp:C++
-#include <bits/stdc++.h>
+#include <cstdint>
+#include <ios>
+#include <iostream>
 
 using i32 = std::int32_t;
 using i64 = std::int64_t;
@@ -48,5 +50,17 @@ signed main() {
         std::cout << solve(n) << "\n";
     }
 }
+
+```
+
+```py:Python
+for _ in [0] * int(input()):
+    n = int(input()) + 1
+    ans = 0
+    p = 2
+    while p <= n:
+        ans += n // p
+        p *= 2
+    print(ans)
 
 ```
