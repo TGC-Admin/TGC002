@@ -189,8 +189,8 @@ void solve() {
 }
 
 signed main() {
-    int $; cin >> $;
-    while($--) solve();
+  int $; cin >> $;
+  while($--) solve();
 }
 
 ```
