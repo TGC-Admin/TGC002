@@ -25,14 +25,15 @@ using i64 = std::int64_t;
 __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
 
-i64 solve(const i32 k, const i32 t, const std::vector<i32>& d, const std::vector<i32>& v) {
-    std::vector<i64> p = { 0 };
+i64 solve(const i32 k, const i64 t, const std::vector<i64>& d, const std::vector<i64>& v) {
+    std::vector<i64> p = { 0 }, q = { 0 };
+    std::inclusive_scan(d.begin(), d.end(), std::back_inserter(q));
     std::inclusive_scan(v.begin(), v.end(), std::back_inserter(p));
 
     std::vector<i64> s;
     boost::transform(
-        boost::combine(p, d), std::back_inserter(s),
-        [t](const auto& e) { return 1LL * t * boost::get<0>(e) - boost::get<1>(e); }
+        boost::combine(p, q), std::back_inserter(s),
+        [t](const auto& e) { return t * boost::get<0>(e) - boost::get<1>(e); }
     );
 
     // 座標圧縮
@@ -68,8 +69,8 @@ signed main() {
     i32 $; std::cin >> $;
     while($--) {
         i32 k, t; std::cin >> k >> t;
-        std::vector<i32> d(k), v(k-1);
-        REP(i, k) std::cin >> d[i];
+        std::vector<i64> d(k-1), v(k-1);
+        REP(i, k-1) std::cin >> d[i];
         REP(i, k-1) std::cin >> v[i];
         std::cout << solve(k, t, d, v) << "\n";
     }

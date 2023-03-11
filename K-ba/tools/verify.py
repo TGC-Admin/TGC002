@@ -19,13 +19,16 @@ for phi in range(Phi):
     k, t = map(int, input().split())
     assert 2 <= k
     assert 1 <= t < 1 << 30
+
     D = [*map(int, input().split())]
-    assert all(0 <= d < 1 << 30 for d in D)
-    assert D == sorted(D)
-    assert k == len(set(D))
+    assert all(0 <= d for d in D)
+    assert sum(D) < 1 << 30
+    assert len(D) == k-1
+
     V = [*map(int, input().split())]
-    assert all(0 <= v < 1 << 30 for v in V)
+    assert all(0 <= v for v in V)
+    assert sum(V) < 1 << 30
     assert len(V) == k-1
     K += k
 
-assert K <= 10 ** 5
+assert K <= 10 ** 6

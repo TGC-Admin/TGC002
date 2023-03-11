@@ -1,4 +1,5 @@
 from itertools import accumulate
+from sys import stdin
 
 # Thanks to: https://ikatakos.com/pot/programming_algorithm/data_structure/binary_indexed_tree
 class BIT:
@@ -22,26 +23,24 @@ class BIT:
             self.data[p] += x
             p += p & -p
 
-K, T = map(int, input().split())
 
-D = [*map(int, input().split())]
-V = [0]; V.extend(accumulate(map(int, input().split())))
-print(V)
+for _ in [0] * int(input()):
+    K, T = map(int, input().split())
 
-S = [*map(lambda p: p[0] - T*p[1], zip(D, V))]
-print(S)
+    D = [0]; D.extend(accumulate(map(int, input().split())))
+    V = [0]; V.extend(accumulate(map(int, input().split())))
+    # print(V)
 
-ranks = { x : i for i, x in enumerate(sorted(list(set(S)))) }
-comp_S = []
-for s in S:
-  comp_S.append(ranks[s])
-print(comp_S)
+    S = [*map(lambda p: T*p[0] - p[1], zip(V, D))]
+    # print(S)
 
-bit = BIT(K+1)
+    ranks = { x : i for i, x in enumerate(sorted(list(set(S) | set(s - T for s in S)))) }
 
-ans = 0
-for i, s in enumerate(comp_S):
-    ans += i - bit.sum(0, s+1)
-    bit.add(s, 1)
+    bit = BIT(2*K)
 
-print(ans)
+    ans = 0
+    for i in range(K):
+        ans += bit.sum(0, ranks[S[i] - T] + 1)
+        bit.add(ranks[S[i]], 1)
+
+    print(ans)

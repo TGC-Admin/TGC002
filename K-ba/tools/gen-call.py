@@ -16,6 +16,7 @@ def call():
     if K > 0: k = K
     if K == 0: k = 10 ** 5 // Phi
     if K == -1: k = randint(2, 10 ** 5 // Phi)
+    if K == -2: k = 10 ** 6 // Phi
     file.write(os.popen(f"./tools/gen-impl.exe { randint(0, 1 << 30) } { k }").read())
 
 joblib.Parallel(n_jobs=1)(

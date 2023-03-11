@@ -22,19 +22,16 @@ signed main(const int, const char *argv[]) {
     i32 t = rng(1, 1 << rng(31));
 
     std::vector<i32> d(k-1), v(k-1);
-    i32 p = 1 << rng(1, 30);
-    i32 q = 1 << rng(1, 30);
+    i32 p = (1 << rng(std::log2(k)-1, 30)) / k;
+    i32 q = (1 << rng(std::log2(k)-1, 30)) / k;
     REP(i, k-1) {
-        d[i] = rng(1, p);
+        d[i] = rng(p) + 1;
         v[i] = rng(q);
     }
-    std::sort(ALL(d));
-    d.erase(std::unique(ALL(d)), d.end());
-    k = d.size() + 1;
 
     print(k, t);
-    print(0, d);
-    print(v.begin(), v.begin()+k-1);
+    print(d);
+    print(v);
 
     return 0;
 }
