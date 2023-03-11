@@ -1,3 +1,5 @@
+配点：$300$ 点
+
 問題文
 =====
 長さ $N$ の非負整数列 $A = (A_1, A_2, ..., A_N)$ があります．  
@@ -17,6 +19,7 @@ $k \; \scriptsize (1 \leq k \leq Q)$ 回目の操作は以下です：
 - $\sum_{\phi} \Phi_{\phi}(N), \sum_{\phi} \Phi_{\phi}(Q) \leq 10^5$
 - $1 \leq l_i \leq r_i \leq N \; \scriptsize (1 \leq i \leq Q)$
 - $1 \leq x_i \leq 100 \; \scriptsize (1 \leq i \leq Q)$
+- 入力はすべて整数
 
 入力
 -----
