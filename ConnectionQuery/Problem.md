@@ -24,6 +24,7 @@ $k$ 番目のクエリは以下です：
 - $\sum_{\phi} \Phi_{\phi}(Q) \leq 10^5$
 - $t_k \in \{\, 0, 1, 2 \,\} \; \scriptsize (1 \leq k \leq Q)$
 - $0 \leq x_k < y_k < 10^5 \; \scriptsize (1 \leq k \leq Q)$
+- 入力はすべて整数
 
 入力
 -----
