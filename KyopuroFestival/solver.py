@@ -116,19 +116,20 @@ class mcf_graph():
             prev_cost=cost
         return result
 
-n = int(input())
-T = [[*map(int, input().split())] for _ in [0] * n]
+for _ in [0] * int(input()):
+    n = int(input())
+    T = [[*map(int, input().split())] for _ in [0] * n]
 
-mf_graph = mcf_graph(2*n+2)
+    mf_graph = mcf_graph(2*n+2)
 
-for i in range(n):
-    mf_graph.add_edge(2*n, i, 1, 0)
-    mf_graph.add_edge(n+i, n*2+1, 1, 0)
+    for i in range(n):
+        mf_graph.add_edge(2*n, i, 1, 0)
+        mf_graph.add_edge(n+i, n*2+1, 1, 0)
 
-for i, j in product(range(n), range(n)):
-    if T[i][0] <= T[j][2] < T[i][1]:
-        mf_graph.add_edge(i, n+j, 1, T[i][1] - T[j][2])
+    for i, j in product(range(n), range(n)):
+        if T[i][0] <= T[j][2] < T[i][1]:
+            mf_graph.add_edge(i, n+j, 1, T[i][1] - T[j][2])
 
-flow, cost = mf_graph.flow(2*n, 2*n+1);
+    flow, cost = mf_graph.flow(2*n, 2*n+1);
 
-print(n - flow, cost)
+    print(n - flow, cost)
