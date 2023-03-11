@@ -20,15 +20,15 @@ signed main(const int, const char *argv[]) {
     u32 seed = std::stoi(argv[1]);
     lib::random_engine<std::mt19937_64> rng(seed);
 
-    i32 n = std::stoi(argv[2]);
+    i64 n = std::stoi(argv[2]);
 
     std::vector<i64> d(n);
     i64 d_sup = n * rng(1, 1050) / 1000;
-    REP(i, 1, n) d[i] = rng(1, std::max(1L, d_sup));
-    if(rng(1) == 0) REP(i, 1L, std::min((i64)n, d_sup)) d[i] = i;
+    REP(i, 1L, n) d[i] = rng(1, std::clamp(d_sup, 1L, n));
+    if(rng(2) == 0) REP(i, 1L, std::min(n, d_sup)) d[i] = i;
     std::shuffle(d.begin()+1, d.end(), rng);
 
-    std::vector<i64> cnt(n+1);
+    std::unordered_map<i64,i64> cnt(n+1);
     REP(i, n) cnt[d[i]]++;
 
     i64 k_inf = n-1, k_sup = 0;
