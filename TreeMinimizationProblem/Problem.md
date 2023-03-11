@@ -1,3 +1,5 @@
+配点：$400$ 点
+
 問題文
 =====
 $1$ から $N$ までの番号のついた $N$ 個の頂点と，$N-1$ 個の辺からなる，連結な重み付き無向グラフがあります．  
@@ -19,13 +21,14 @@ $2 \leq i \leq N$ を満たす任意の整数 $i$ について，頂点 $i$ と�
 制約
 -----
 - $1 \leq \Phi \leq 10^5$
-- $1 < N \leq 5 \times 10^4$
+- $1 < N \leq 10^4$
 - $\sum_{\phi} \Phi_{\phi}(N) \leq 10^5$
 - $1 \leq Q$
 - $\sum_{\phi} \Phi_{\phi}(Q) \leq 10^5$
 - $1 \leq p_i < i\; \scriptsize (2 \leq i \leq N)$ 
-- $|w_i| \leq 10^6 \; \scriptsize (1 \leq i < N)$
-- $1 \leq a_i < b_i \leq N \; \scriptsize (1 \leq i \leq Q)$
+- $|w_i| \leq 10^6 \; \scriptsize (2 \leq i \leq N)$
+- $1 \leq a_i < b_i \leq N \; \scriptsize (1 \leq i \leq Q)$  
+- 入力はすべて整数
 
 入力
 -----
@@ -75,3 +78,19 @@ $a_Q \enspace b_Q$
 
 ```
 $2$ 頂点 $2, 3$ を結ぶ辺に対して操作を $1$ 回行うことが最適です．  
+
+---
+```入力例2
+1
+2
+1 -1
+3
+1 2
+1 2
+1 2
+
+```
+```出力例2
+-3
+
+```

@@ -17,7 +17,7 @@ def call():
     if N > 0: n = N
     if N == 0: n = 10 ** 5 // Phi
     if N == -1: n = randint(2, 10 ** 5 // Phi)
-    n = min(n, 5 * 10**4)
+    n = min(n, 10**4)
     if Q > 0: q = Q
     if Q == 0: q = 10 ** 5 // Phi
     if Q == -1: q = randint(1, 10 ** 5 // Phi)

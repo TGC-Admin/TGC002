@@ -17,7 +17,7 @@ N, Q = 0, 0
 for phi in range(Phi):
     debug(phi)
     n = int(input())
-    assert 1 < n <= 5 * 10 ** 4
+    assert 1 < n <= 10 ** 4
     for i in range(2, n+1):
         p, w = map(int, input().split())
         assert 1 <= p < i
