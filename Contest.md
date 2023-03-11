@@ -6,7 +6,7 @@ $\Large {\textnormal{The Gray  -- Beginner's Algorithmic Competition}} \scriptsi
 ---
 
 「初心者による初心者のための」ビギナー向けコンテストです。   
-$11$ 問構成の拡大バージョンでお送りします。
+$12$ 問構成の拡大バージョンでお送りします。
 
 どなたでも、ぜひぜひお気軽にご参加ください！！  
 
@@ -23,10 +23,48 @@ $\large \color{FF0000}\bold{\text{注意}}$：コンテストに関して重要�
 
 コンテスト終了後の感想戦等に使用していただいても構いません。
 
-実施要項 <予定>
+
+### 問題一覧
+[A 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_A.1k2) /
+[B 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_B.32j) /
+[C 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_C.fk3) /
+[D 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_D.bmn) /
+[E 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_E.4i2) /
+[F 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_F.k23) /
+[G 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_G.nm2) /
+[H 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_H.4k2) /
+[I 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_I.3jq) /
+[J 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_J.b2l) /
+[K 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_K.bj1) /
+[L 問題](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_L.bm9)
+
+First Accepted
 ---
-日時：$\bold{2023{/}03{/}11\>\>13{:}10 - 16{:}30}\>\;(200$ 分間$)$  
-ペナルティ：$5$ 分/個
+敬称略  
+時刻は提出へのリンクになっています。
+
+A 問題：[**nok0**](https://mojacoder.app/users/nok0) [[00:00:56](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_A.1k2/submissions/be1fa40f-31d8-4b33-a142-a604e55b51b0)]  
+B 問題：[**keisuke6**](https://mojacoder.app/users/keisuke6) [[00:02:58](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_B.32j/submissions/57407832-4873-412b-8141-cb33fa88b2f4)]  
+C 問題：[**LayCurse**](https://mojacoder.app/users/LayCurse) [[00:05:08](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_C.fk3/submissions/c193be68-c205-42cf-a670-e3d40e199ba6)]  
+D 問題：[**LayCurse**](https://mojacoder.app/users/LayCurse) [[00:08:47](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_D.bmn/submissions/09b17f01-4741-49d0-8f53-ade89384ff81)]  
+E 問題：[**keisuke6**](https://mojacoder.app/users/keisuke6) [[00:08:36](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_E.4i2/submissions/c45dfd6e-ccf5-431e-b58e-44fc478125b1)]  
+F 問題：[**Daylight**](https://mojacoder.app/users/Daylight) [[00:08:34](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_F.k23/submissions/f36fae89-6884-4741-a7f0-43ce447c1639)]  
+G 問題：[**LayCurse**](https://mojacoder.app/users/LayCurse) [[00:23:20](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_G.nm2/submissions/a4405117-459c-449f-b7ad-1a0cabc6cba4)]  
+H 問題：[**qa**](https://mojacoder.app/users/qa) [[00:27:32](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_H.4k2/submissions/95e9a98f-8f69-447b-aa93-8329b843d67e)]  
+I 問題：[**qa**](https://mojacoder.app/users/qa) [[00:06:49](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_I.3jq/submissions/ef33fd49-98a4-464b-9ac4-181f92cd3f40)]  
+J 問題：[**qa**](https://mojacoder.app/users/qa) [[01:11:49](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_J.b2l/submissions/f7bb166f-9160-4c8e-b477-398a2ab9198e)]  
+K 問題：[**nok0**](https://mojacoder.app/users/nok0) [[00:30:11](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_K.bj1/submissions/36535b51-7db2-4f6b-9b7c-42bc1ffffff8)]  
+L 問題：[**nok0**](https://mojacoder.app/users/nok0) [[01:06:09](https://mojacoder.app/users/uni_kakurenbo/problems/TG-BsAC-002_L.bm9/submissions/627f0cfc-6c83-44c0-896d-0cc6935cc7f2)]  
+
+### 事後アンケート
+よろしければご協力ください：[**Google Forms**](https://docs.google.com/forms/d/e/1FAIpQLSc3RQBUedNTOA7PkqCpZnJ_4p5GpMtk_0z63JwD_Zsex2IXDw/viewform?usp=sf_link)
+
+
+実施要項
+---
+日時：$\bold{2023{/}03{/}11\>\>13{:}10 - 17{:}00}\>\;(230$ 分間$)$  
+ペナルティ：$5$ 分/個  
+[2023/03/10 更新]
 
 採点について (サンプル問題)
 ---
@@ -56,34 +94,39 @@ $$
 	\begin{array}{c|c|c}
 		\mathrm{\#} & \mathrm{Task} & \mathrm{Score} \\ \hline\hline
 		1 & \> \mathrm{A}    & 100 \\ \hdashline 
-		2 & \> \mathrm{B}    & 100 \\ \hdashline
-		3 & \> \mathrm{C}    & 100 \\ \hdashline
-		4 & \> \mathrm{D}  & 100 \\ \hline
-		5 & \> \mathrm{E}   & 200 \\ \hdashline
+		2 & \> \mathrm{B}    & 100 \\ \hline 
+		3 & \> \mathrm{C}    & 200 \\ \hdashline
+		4 & \> \mathrm{D}    & 200 \\ \hdashline
+		5 & \> \mathrm{E}  & 200 \\ \hdashline
 		6 & \> \mathrm{F}   & 200 \\ \hdashline
-		7 & \> \mathrm{G}  & 200 \\ \hdashline
-		8 & \> \mathrm{H}  & 200 \\ \hline
-		9 & \> \mathrm{I}  & 300 \\ \hdashline
-		10 & \> \mathrm{J}  & 300 \\ \hdashline
-		11 & \> \mathrm{K}  & 300 \\ \hline\hline
-        - & \mathrm{Total}   & 2100 \\
+		7 & \> \mathrm{G}   & 200 \\ \hline
+		8 & \> \mathrm{H}  & 300 \\ \hdashline
+		9 & \> \mathrm{I}  & 300 \\ \hline
+		10 & \> \mathrm{J}  & 400 \\ \hdashline
+		11 & \> \mathrm{K}  & 400 \\ \hdashline
+		12 & \> \mathrm{L}  & 400 \\ \hline\hline
+        - & \mathrm{Total}   & 3000 \\
 	\end{array}
 $$
 
+配点の高い問題の方が難しいと思われますが、等しい配点の問題が**難易度の昇順に並んでいるとは限りません**。(意図的にシャッフルしています。)
+
 配点に対する Difficulty の目安：
-- $\text{100}$ 点：$\color{808080}{100} - $  
-- $\text{200}$ 点：$\color{008000}{1000} - $  
-- $\text{300}$ 点：$\color{0000FF}{1600} - $  
+- $\text{100}$ 点：$\color{808080}{100} \color{FFF}\> - $  
+- $\text{200}$ 点：$\color{808080}{300} \color{FFF}\> - $  
+- $\text{300}$ 点：$\color{008000}{1000} \color{FFF}\> -  $  
+- $\text{400}$ 点：$\color{00C0C0}{1400} \color{FFF} - \color{C0C000}{2000}$  
 
 全体的な難易度としては、[前回](https://mojacoder.app/users/Machonium/contests/TG-BsAC-001) および [前々回](https://mojacoder.app/users/Machonium/contests/TG-BsAC-000) よりも高いですが、問題数の増加にも伴って、より広い層が楽しめる構成になっていると思います。  
 
+[2023/03/10 更新]
 
 言語
 ---
-少なくとも C++, Python (PyPy3) の二つの言語で AC を得られることを確認しています。  
-前半の問題は Java による AC も確認しています。  
+いずれの問題も，少なくとも C++, Python (PyPy3), Java の $3$ つの言語で $1400 \; \scriptsize \mathrm{[ms]}$ 以内に AC を得られることを確認しています。  
 
-処理速度はじめ言語及び処理系の特性による差異については十分注意してください。
+処理速度はじめ言語及び処理系の特性による差異については十分注意してください。  
+(たとえば Java にて参加される方はスタックの拡張を推奨します。)
 
 解説
 ---
@@ -115,6 +158,10 @@ $$
 - [TGC001](https://mojacoder.app/users/Machonium/contests/TG-BsAC-001) 2022/10/23  
 
 [GitHub](https://github.com/uni-kakurenbo/TGC)
+
+#### Writer 募集
+「Writer / Tester / 運営 をやってみたい！」という方はいつでもお待ちしております。運営陣 (上記 GitHub のリポジトリを参照してください) の DM まで気軽にお声がけください。  
+競プロをはじめて $1$ ヶ月が経過している方であれば Rating 等その他の事柄は問いません。
 
 ---
 
