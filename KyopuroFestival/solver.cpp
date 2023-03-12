@@ -13,13 +13,12 @@ using i64 = std::int64_t;
 __attribute__((constructor)) inline void fast_io() { std::ios::sync_with_stdio(false), std::cin.tie(nullptr); }
 
 
-std::pair<i32,i64> solver(
+std::pair<i32,i64> solve(
     const i32 n,
     const std::vector<i32> s,
     const std::vector<i32> t,
     const std::vector<i32> u
 ) {
-
     atcoder::mcf_graph<i32,i64> G(2*n+2);
 
     REP(i, n) REP(j, n) {
@@ -44,7 +43,7 @@ signed main() {
         std::vector<i32> s(n), t(n), u(n);
         REP(i, n) std::cin >> s[i] >> t[i] >> u[i];
 
-        const auto ans = solver(n, s, t, u);
+        const auto ans = solve(n, s, t, u);
         std::cout << ans.first << " ";
         std::cout << ans.second << "\n";
     }
